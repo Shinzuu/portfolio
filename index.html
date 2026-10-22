@@ -1,0 +1,1074 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Shinzuu | AI automation, CRM workflows and Claude Code tools</title><meta name="description" content="Nishadul “Shinzuu” Islam builds automations that run on their own: agents for Claude Code, apps people use, data pipelines."><meta name="robots" content="noindex"><link rel="icon" href="data:,"><script>(function(h){var q=new URLSearchParams(location.search);
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+h.classList.add(rm?'rm':'has-motion');
+try{var c=document.createElement('canvas'),g=c.getContext('webgl2')||c.getContext('webgl');if(!g)h.classList.add('no3d');else{var d=g.getExtension('WEBGL_debug_renderer_info'),n=String(d?g.getParameter(d.UNMASKED_RENDERER_WEBGL):g.getParameter(g.RENDERER));if(/swiftshader|llvmpipe|softpipe|software/i.test(n))h.classList.add('swgl');var x=g.getExtension('WEBGL_lose_context');x&&x.loseContext()}}catch(e){h.classList.add('no3d')}
+if(q.has('poster')){h.classList.remove('rm','no3d','swgl','has-motion')}})(document.documentElement);</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"><style>html.lenis,html.lenis body{height:auto}.lenis:not(.lenis-autoToggle).lenis-stopped{overflow:clip}.lenis.lenis-smooth iframe{pointer-events:none}#sz8{--grain:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAKqUlEQVR42k2ZS2IcOQxDH0jn/icmkQWosrOYcdLuKoki8ZPcGEBysRQjaG/+DRssuQR4hSWAdWPEqIzkUTMuycgWgwRlAEsYEGsAMKU8g6JATWFW0qhdGKuQF4GEGMxIgAHT2nu9ha3y+P3eaiSwDKPVGszbzNuYKdCUrGa1SPnUEitsVrBAIQkQdmFksYiVWMpGCGGNm3WBkYFFyK0xHq+EbERJMtZa8o9uZZbANGBskGyxtAw2hYUhP9mpZ2FQgZfSYmRTEoNsEEA7VSnAek83lGTxzs40eL2WELcz8kgMrCwxbLpCJaN7UV7fRoWNy0K05Qa1MQzG1C29UHkRxjStTq9caddmJBlkLHOHKCENhSwjWMnY2PKCobSsLLPXNSNRtMj5a9ls4F/O3QADoDJal/AiKl1/vyTS8WtTSGPofC6/rr/9rcDg1iLDIglbWhewFNcBeJRTMp2Kg1eFWOp1gK2ydSdrs3m5uOlyul31LdaIoY2gPc6iBVq31i4WYclWWXRKCYhCdv4mkJRhNVrkUs7SwraRSyX9/hvYWlkNjMcLLEsLrUnL/6Tr3zswxr5SeakASIBD2RHZtYulcRrQTr0xhZgsgesmFetiJWCdN42Ry2gyTDbLIrXkAuVcRU4woyhJZYQ7rwcaIZXQUqzMuo1aQjT7xlF1lcVWUbS3gLrGLmeIN1u5fRWVarlBMgyFZKEFrEwMkDIGJZDHYI+LUrkZm/VgWY0tmSr2Xlu2pE7raBD2gGBAi7QIaX2I7FSkbS2lIY1rxnhJ12RJZjRHOQ1urx2cLIlVZWYtlvRrYLR/SUS3fUrpSiPK9tI57TQDzZ95t13ipiX4uxjLh14rlwox11Ir3w6lwNME/48ooBjqoGuC7ioWuzWUl/qadQ+ITWcTLg1l3RjffsRYQq3B2fWhGl63dOecVlpJ0uOfVCiTY/fRzyChCfAg47HAYi0kk06wqGB6INZ1qP/+ARXDUpasVV9d1zrALSuocP1RoIeAJWXOIN0ghaSClxYFpUCLGUbIkhYoCUmePEgGy4sFrSuw1w7DaRHrCqFaGdk0sUQ5zb45OplyPX3QqSVibUGESGkDwDrBBHqMsLTDGyFsHcDo8H3fogK2dDTGPcdX8cJIW8ffZm+QQ6yDDcUiOadmKEs4igGVQuiQpsZEjDg1qlDVWziFpeMZn1CrN2r1dpAzzauRV+UF2WF+f2ynj+lOmUi2mkHIaMGlJdwqkGkPSIH6vO3HpXFrKQ9hqbSlLOZkFXkgxffpV8Y6jqh00tM8wc/3q5LX/SkqMTeU+6Ps3lhtNERcKY9I/Tk95NFtPE1zIuU+14kTWq8xHe2sOs1oKoPoSF1Z4of1W0QRwaVDaijngXt6cZyJCqNV0Pi2lR2PSzodlFH0PQOGukdntWuJjn7xUMqZWycw3dqjpRusvOcEhQTyqG7Be+oxwna+lzYTvfGVPosODqSpHFUzPOfRSp3r2u3k1H0R1qUN5ZgM8PVBHZLo9KDYq896adpZcLkYW5Sb/fZ+yp9zO56o1MP+yI0sM6zOkzOZ30AXvxZDUYCRYYQkTNtao7bDW7p2y7CVpDUqkFSR22qijlEh2namWy71A6qTsVa7Hn2+3ldmJuJmkYpl67k1R5bsU0ha33DZ7icK77ce2T8ZNleA0LsympS5lub6K5jVZ2QCZ/5Byhl2cO8m9XSCm1F9DnPPXOrQ4KqQCbRVnO4/3yhsR6q+hoz0R44voMhaB6XsDO0Njz6SlWmf7rmTndOn5Y2zztg+JgCtuUI/7KynLr7P/GOFviz5iYQ4PBXzmj5t5eiGaP1Tf4TGY8ryPbHRhrLrgS9WVLYVCJ8HFG/QyjkEq23K5Qiwzpq8Lh3GGdonK9iMp8TEvIHiL6KtpVMLPnvnigyS2Ais6LVVHdf75GRCiCugmuiYUIxF5hko2ZwkeaW+HENrI60WxE2SsCc6xNwqfXbKUfZlEIcDwqKi+U1M+v10Gtn76YY9ClKUjzrYkolJ2nBeKyxLoezF59djyCWt2hb0KbuwpTQ6MfY5qrBL/pQyjgu0hFlb40GYdkawVIdv/UOUKucJS7Zdh972uZ2AcjKO+zmouYHdQ0W/POTkwvN7+W555ai+2NjIqH/3i+P44pVSbBX2qm2e1AbFF/EQIaGWooy8kvephbyYPaJ+XBZiz/fKFv+SBrDx9yIzfpA7DkwbKWLjEB1prrdP2AKt5xnCqcnDljZKbPRofalzVNeEkjgBGdNwJfQlR0dImYtEMOE/yRPZ6QR8oaGTbkkdwjKs2pEpj9KJqGgnH4zc8Mf/IeuV/bBboWzZzagPXh/n1Je0iLkgb+8TnozhToyEQ/qhX9DoVaX1EkQ8e+K+L27SvwNcXVMmJ7uA0nsWQj6J4gZN/n+OT44JrIi8f7/7pjlFcP9NTAM4WcAiJRdMxiei/dHvid03bzJsvvat5IJ3SGdak/Lp4oRnLniDlPOM+Qh6nmV/Dw6T1jnl1MvnjvbEl/KHeRbacgnj9tblnryUzEUhvWimg9+6RMio895nYh0zalutOuVbKtl9Ata/nvPyxMi5lanyPO1uQCMYjTfm/BpPtusz7oma9vBjiei+fMBWeHO1lzQQvcFGYUUwpJ80z062JgYkabnK8uO3wiczlfPVLQvRoJU9TFJDPY3VFuuJQjrBUnHWWholAhbtupYqxlI5KkC/SgBHoOdQUjOe5EtomX2cBgqf2BE0Z9WfMr6w41F/cEu0iFqxs6+EU6cKWskLbRmVWjoSTtrTR/ZSksXzdnnCrxpOYKOAdMbQ5Q65uqJmAx8ntxW5xxo1nfO9hj3DKdRat9DpfMqbsBrLjGUu4sobbzaYxPZ9rH6JBXNSK9BzFvC6NEPXLG80Y2Eu8To4TgeEwvguNDKGwdM4x/LQST/eVURCBynmNFJUoNVwgl7F3p4U3egRKr2Eudxnb1t2ksQ2rCJaWsgvVlIK4rrHPR+cT+vjoqLAd0WDtMpopXvKOOHT6hLW0xCPfEF6WdGA9y0nbiUqOHcCm1MiQuvkFms02mO9eP8G5GETLSt5kc90W3UMEu2zmSvimeoLNeZQT3JeXBH9X6a7qqOlF+Mbs871lFSK+ehoKYnBip+SyquXvqxHuJ8xezFGvazr5vUumsCj3IMZq5E30MK7yOm7QKu7E0jo9640Euk/9fQUYYkDNScKYetKKUqftGNZ9SU8yULTs/NmUI+Nvnn1JqfSQ/0Xg29mVzmIlZOgxHPmSlLftcXFGgnp7rKv8qK7D7vLzYvekva8aHbU59TxPGn/RKnmWtpUhgCxalHn5+JpHwXrIonkZpegRFRxxu3IuL4SJ+Df9ESU9neBE+Q4LYSxTx3orm47etj1+dyYCB1Ex4DmifvHFe2z7DcBl+OrvbITd95iJEeOilUzse85+b4LVd54BKQNc/eTkZORYe3WiuBkUMwcBkY7vKZ8wT4IHdjn1vUF4n4hVWRw4qQI1BfenpKNib9XnBG6q86jzrNcshU99G6jNleBf25Yk1SsylPnXOMD9uJJeZBDogltI8c3NtMbuM6S2USA0l1K52gaE91zuaBizPeqkHi444zC3J/Be8z1Jy2EF0kkvPBdbOX6YfQxnn33aXW6ZXz5ABd9R3W/y9H/Tpic6YwZHX0AAAAASUVORK5CYII=)}:root{--bg:#0A0A0B;--surface:#121214;--line:rgba(242,239,234,.12);--line2:rgba(242,239,234,.24);--ink:#F2EFEA;--muted:rgba(242,239,234,.62);--red:#E5322A;--sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;--g:clamp(20px,3vw,40px);--ease:cubic-bezier(.16,1,.3,1)}@media (max-width:699px){:root{--g:16px}}:root{color-scheme:dark}html{scrollbar-color:rgba(242,239,234,.2) transparent}#sz8 .pitch,#sz8 .sh,#sz8 h3,#sz8 .lede{text-wrap:balance}#sz8{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}#sz8 *,#sz8 *::before,#sz8 *::after{box-sizing:border-box}#sz8 p,#sz8 h1,#sz8 h2,#sz8 h3,#sz8 ul,#sz8 ol,#sz8 figure{margin:0;padding:0}#sz8 ul,#sz8 ol{list-style:none}#sz8 a{color:inherit;text-decoration:none}#sz8 img{display:block;max-width:100%}#sz8 :focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:999px}#sz8 .sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}#sz8 .mono{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:0}#sz8 .pill{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:999px;font:500 16px/1 var(--sans);white-space:nowrap;cursor:pointer;border:1px solid transparent;transition:background-color .3s var(--ease),border-color .3s var(--ease)}#sz8 .pill.red{background:var(--red);color:var(--bg)}#sz8 .pill.glass{background:rgba(18,18,20,.55);border-color:var(--line);color:var(--ink);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}#sz8 .pill.big{min-height:52px;padding:0 26px;font-size:17px}@media (hover:hover) and (pointer:fine){#sz8 .pill.glass:hover{border-color:var(--line2)}#sz8 .pill.red:hover{background:#ef4b42}}#sz8 .nav{position:fixed;z-index:50;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px var(--g);pointer-events:none}#sz8 .nav>*{pointer-events:auto}#sz8 .nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(10,10,11,.72);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line);opacity:0;transition:opacity .3s ease;pointer-events:none}#sz8 .nav.bar::before{opacity:1}#sz8 .nav.bar{pointer-events:auto}#sz8 .wm{display:inline-flex;align-items:center;min-height:44px;font:500 15px/1.2 var(--sans);letter-spacing:-.005em;white-space:nowrap}#sz8 .nav .r{display:flex;gap:8px}#sz8 .nav .pill.glass[aria-current="true"]{background:rgba(242,239,234,.14);border-color:var(--line2)}#sz8 .nav [data-menu][aria-expanded="true"]{visibility:hidden}#sz8 .nav .ph{display:none}@media (max-width:699px){#sz8 .nav{gap:8px}#sz8 .nav .dk{display:none}#sz8 .nav .ph{display:inline-flex}#sz8 .nav .pill{padding:0 15px}}#sz8 .sheet{position:fixed;z-index:60;inset:0;background:var(--bg);display:flex;flex-direction:column;padding:0 var(--g) 28px;opacity:0;transition:opacity .25s var(--ease);overflow-y:auto}#sz8 .sheet[hidden]{display:none}#sz8 .sheet.open{opacity:1}#sz8 .sheet .top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 0}#sz8 .sheet .top .r{display:flex;gap:8px}#sz8 .sheet .top .pill{padding:0 15px}#sz8 .nav [data-menu],#sz8 .sheet [data-close]{min-width:78px;justify-content:center}#sz8 .sheet nav{margin-top:56px}#sz8 .sheet nav a{display:flex;align-items:center;min-height:64px;border-top:1px solid var(--line);font:600 40px/1 var(--sans);letter-spacing:-.03em}#sz8 .sheet nav a:last-child{border-bottom:1px solid var(--line)}#sz8 .sheet>.pill.red{margin-top:24px;align-self:flex-start}#sz8 .sdir{margin-top:8px;padding-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:0 16px;font-size:14px;color:var(--muted)}#sz8 .sdir a{display:flex;align-items:center;min-height:44px}#sz8 .sdir a.em{grid-column:1/-1}#sz8 .stage{position:relative}#sz8 .layer{position:sticky;top:0;height:100lvh;margin-bottom:-100lvh;overflow:hidden;z-index:0}#sz8 .layer .poster,#sz8 .layer .cv,#sz8 .layer .vig{-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 28vh),transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 28vh),transparent 100%)}#sz8 .layer .poster,#sz8 .layer .cv{position:absolute;inset:0;width:100%;height:100%}#sz8 .layer .poster img{width:100%;height:100%;object-fit:cover}#sz8 .layer .poster.p1{opacity:var(--s2,0)}#sz8 .layer.live .poster{visibility:hidden}#sz8 .vig{position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 50% 50%,rgba(10,10,11,0) 35%,var(--bg) 80%);opacity:0;pointer-events:none}#sz8 .vig::after{content:"";position:absolute;inset:0;background:var(--grain) 0 0/64px 64px;-webkit-mask-image:radial-gradient(circle at 50% 50%,transparent 30%,#000 65%);mask-image:radial-gradient(circle at 50% 50%,transparent 30%,#000 65%)}#sz8 .lbls span{position:absolute;left:0;top:0;opacity:0;font-size:12px;line-height:1;color:var(--ink);padding:4px 7px;border:1px solid var(--line);border-radius:999px;background:rgba(10,10,11,.6);white-space:nowrap;translate:-50% -170%;pointer-events:none}#sz8 .cv{opacity:0;transition:opacity 1.2s ease}#sz8 .cv.on{opacity:1}#sz8 .caps{position:absolute;z-index:3;left:var(--g);top:calc(100svh - 132px);height:80px;right:var(--g)}#sz8 .prog{position:absolute;left:0;top:0;display:block;width:120px;height:1px;background:var(--line);opacity:0;transition:opacity .4s ease}#sz8 .prog b{display:block;height:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(var(--p,0))}#sz8 .caps p.cnt{top:-24px;font:400 12px/1 var(--mono);letter-spacing:.04em;color:var(--muted)}#sz8 .caps.go .prog,#sz8 .caps.go p.cnt{opacity:1}#sz8 .caps p.cnt span{color:var(--ink)}#sz8 .caps p{position:absolute;left:0;top:18px;font:500 clamp(22px,2.4vw,32px)/1.2 var(--sans);letter-spacing:-.02em;color:var(--ink);opacity:0;transition:opacity .4s ease}#sz8 .caps p.on{opacity:1}#sz8 .hero{position:relative;z-index:1;height:100svh;min-height:560px}#sz8 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 15% 85%,rgba(10,10,11,.85),rgba(10,10,11,0) 70%);pointer-events:none;opacity:var(--scrim,1)}@media (max-width:699px){#sz8 .hero::before{background:radial-gradient(ellipse 120% 60% at 20% 88%,rgba(10,10,11,.85),rgba(10,10,11,0) 75%)}}#sz8 .hc{z-index:1}#sz8 .hc{position:absolute;left:var(--g);bottom:clamp(40px,8vh,88px);max-width:min(980px,calc(100% - 2*var(--g)))}#sz8 .eyebrow{font:400 13px/1.4 var(--mono);color:var(--muted)}#sz8 .hc .clock{display:none;margin-top:6px;font:400 12px/1.4 var(--mono);color:rgba(242,239,234,.6)}#sz8 .hl{margin-top:18px;font:600 clamp(44px,7.2vw,112px)/.98 var(--sans);letter-spacing:-.035em}#sz8 .hl .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}#sz8 .hl .ln>span{display:block;white-space:nowrap}html.has-motion #sz8 .hl:not(.up) .ln>span{transform:translateY(100%)}#sz8 .lede{margin-top:22px;max-width:36ch;font-size:clamp(18px,1.45vw,21px);line-height:1.5;color:var(--ink)}#sz8 .acts{margin-top:28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}#sz8 .tl{display:inline-flex;align-items:center;gap:10px;min-height:44px;font:500 17px/1 var(--sans)}#sz8 .tl svg{width:16px;height:16px;transition:transform .3s var(--ease)}@media (hover:hover) and (pointer:fine){#sz8 .tl:hover svg{transform:translateY(3px)}}#sz8 .hud{position:absolute;right:var(--g);font:400 12px/1.4 var(--mono);color:rgba(242,239,234,.6);text-align:right}#sz8 .hud.tr{top:84px}#sz8 .hud.br{bottom:clamp(40px,8vh,88px)}#sz8 .scene{position:relative;z-index:1;height:180vh}@media (max-width:699px){#sz8 .scene{height:160vh}#sz8 .hc{bottom:64px}#sz8 .hud.tr{display:none}#sz8 .hc .clock{display:block}#sz8 .hud.br{bottom:24px;left:var(--g);right:auto;text-align:left}#sz8 .acts{gap:20px}#sz8 .caps{top:calc(100svh - 116px)}}#sz8 .steps-wrap{display:none}html.rm #sz8 .layer,html.no3d #sz8 .layer{position:relative;height:100svh;min-height:560px;margin-bottom:calc(-1*max(100svh,560px))}html.rm #sz8 .cv,html.no3d #sz8 .cv,html.rm #sz8 .caps,html.no3d #sz8 .caps{display:none}html.rm #sz8 .scene,html.no3d #sz8 .scene{height:auto;padding:clamp(56px,10vh,120px) var(--g) 0}html.rm #sz8 .steps-wrap,html.no3d #sz8 .steps-wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--g);align-items:end}html.rm #sz8 .steps-wrap .sr,html.no3d #sz8 .steps-wrap .sr{position:static!important;width:auto;height:auto;margin:0;overflow:visible;clip:auto;clip-path:none;white-space:normal}#sz8 .steps-wrap img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:20px;border:1px solid var(--line)}#sz8 .steps{counter-reset:s}#sz8 .steps li{counter-increment:s;display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line);font:400 17px/1.4 var(--mono)}#sz8 .steps li::before{content:counter(s);color:var(--muted)}@media (max-width:699px){html.rm #sz8 .steps-wrap,html.no3d #sz8 .steps-wrap{grid-template-columns:1fr}}html.poster #sz8 .nav,html.poster #sz8 .hero,html.poster #sz8 .scene,html.poster #sz8 main,html.poster #sz8 .foot,html.poster #sz8 .caps{visibility:hidden}html.poster #sz8 .cv{transition:none}#sz8 main{position:relative;z-index:1;margin-top:-20vh;background:linear-gradient(to bottom,rgba(10,10,11,0) 0,var(--bg) 20vh);padding:clamp(80px,14vh,160px) var(--g) 96px}#sz8 main::before{content:"";position:absolute;left:0;right:0;top:0;height:24vh;z-index:-1;background:var(--grain) 0 0/64px 64px;pointer-events:none;-webkit-mask-image:linear-gradient(transparent,#000 40%,transparent);mask-image:linear-gradient(transparent,#000 40%,transparent)}html.rm #sz8 main,html.no3d #sz8 main{margin-top:0}#sz8 .feat{scroll-margin-top:72px}#sz8 .kick{font:400 13px/1.4 var(--mono);color:var(--muted);margin-bottom:14px}#sz8 .sh{font:600 clamp(36px,5vw,72px)/1.02 var(--sans);letter-spacing:-.03em;margin-bottom:clamp(28px,4vw,56px)}#sz8 .card,#sz8 .ic>article{position:relative}#sz8 .card::after,#sz8 .ic>article::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .5s ease;background:radial-gradient(520px circle at var(--mx,50%) var(--my,50%),rgba(242,239,234,.07),rgba(242,239,234,0) 60%)}html.tilt #sz8 .card:hover::after,html.tilt #sz8 .ic>article:hover::after{opacity:1}html.tilt #sz8 .th img{transition:transform .6s var(--ease),filter .4s var(--ease)}#sz8 .card{display:grid;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:clip;transition:border-color .6s var(--ease)}#sz8 .card.wide{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}#sz8 .card .media{align-self:start;padding:clamp(12px,1.7vw,24px)}#sz8 .bf{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0e0e10}#sz8 .bf .bar{display:flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-bottom:1px solid var(--line);background:#161618;font-size:12px;line-height:1;color:var(--muted);white-space:nowrap;overflow:hidden}#sz8 .bf .bar i{width:8px;height:8px;border-radius:50%;background:rgba(242,239,234,.18);flex:none}#sz8 .bf .bar span{margin-left:8px;overflow:hidden;text-overflow:ellipsis}#sz8 .shot{overflow:hidden;aspect-ratio:16/10}#sz8 .shot img{height:100%;object-fit:cover;object-position:top center}@media (max-width:699px){#sz8 .shot{aspect-ratio:4/5}}#sz8 .media .note{display:block;margin-top:12px;font:400 14px/1.45 var(--mono);color:var(--muted)}#sz8 .media .note{padding-inline:max(0px,calc(clamp(24px,3vw,44px) - clamp(12px,1.7vw,24px)))}@media (min-width:1100px){#sz8 .pair .pitch{min-height:2lh}}@media (max-width:699px){#sz8 .media .note{font-size:18px;font-family:var(--sans);padding-inline:6px}}@media (max-width:699px){#sz8 .tl{font-size:18px}}#sz8 .th img{transform-origin:50% 0;transform:translateY(var(--py,0%)) scale(calc(var(--ps,1) * var(--hs,1)));transition:transform .6s var(--ease),filter .4s var(--ease)}#sz8 .shot img{width:100%;transition:transform .6s var(--ease)}@media (hover:hover) and (pointer:fine){#sz8 .card:hover{border-color:var(--line2)}#sz8 .card:hover .shot img{transform:scale(1.03)}}#sz8 .card .txt{padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:18px;min-width:0}#sz8 .tag{font:400 14px/1.4 var(--mono);color:var(--muted)}#sz8 .card h3{font:600 clamp(48px,4.4vw,64px)/1 var(--sans);letter-spacing:-.035em}#sz8 .pitch{font-size:clamp(19px,1.5vw,22px);line-height:1.45;max-width:34ch}#sz8 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 20px;border-top:1px solid var(--line);padding-top:18px}#sz8 .stats b{display:block;font:500 clamp(36px,3.2vw,48px)/1 var(--sans);letter-spacing:-.03em;font-variant-numeric:tabular-nums}#sz8 .stats span{display:block;margin-top:8px;font-size:15px;line-height:1.4;color:var(--muted);overflow-wrap:normal;word-break:normal;hyphens:manual;-webkit-hyphens:manual}#sz8 .how{border-top:1px solid var(--line)}#sz8 .how summary{display:flex;align-items:center;justify-content:space-between;min-height:52px;cursor:pointer;font:500 17px/1 var(--sans);list-style:none}#sz8 .how summary::-webkit-details-marker{display:none}#sz8 .how summary i{position:relative;width:14px;height:14px}#sz8 .how summary i::before,#sz8 .how summary i::after{content:"";position:absolute;left:0;top:6px;width:14px;height:2px;background:currentColor;transition:transform .3s var(--ease)}#sz8 .how summary i::after{transform:rotate(90deg)}#sz8 .how[open] summary i::after{transform:rotate(0)}#sz8 .how .hb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.33,1,.68,1)}#sz8 .how.op .hb{grid-template-rows:1fr}#sz8 .how .hb>div{overflow:hidden;min-height:0}#sz8 .how p{padding:4px 0 18px;max-width:66ch;color:var(--ink)}@media (prefers-reduced-motion:reduce){#sz8 .how .hb{transition:none}#sz8 .how[open] .hb{grid-template-rows:1fr}}#sz8 .links{display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap;margin-top:auto}#sz8 .priv{font-size:18px;color:var(--muted)}@media (min-width:1100px){#sz8 .card.wide .media{position:sticky;top:96px}}@media (min-width:700px){#sz8 .card.wide .shot{aspect-ratio:13/7}}@media (max-width:699px){#sz8 .card.wide .shot{aspect-ratio:20/21}}@media (min-width:1100px){#sz8 .card.wide .txt{justify-content:center}#sz8 .card.wide .links{margin-top:4px}}@media (max-width:1099px){#sz8 .card.wide{grid-template-columns:1fr}}#sz8 .feat .lead{margin-bottom:clamp(16px,2vw,24px)}#sz8 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}#sz8 .pair{align-items:start}#sz8 .pair .card{grid-template-rows:auto 1fr}@media (max-width:1099px){#sz8 .pair{grid-template-columns:1fr}}@media (max-width:699px){#sz8 .card .txt{padding:22px 18px 24px}#sz8 .stats{gap:12px}#sz8 .stats{grid-template-columns:1fr;gap:0}#sz8 .stats li{display:grid;grid-template-columns:calc(clamp(28px,8.5vw,40px) * 2.6) 1fr;column-gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}#sz8 .stats li:last-child{border-bottom:0}#sz8 .stats b{font-size:clamp(28px,8.5vw,40px)}#sz8 .stats span{margin-top:0;font-size:18px;line-height:1.3}}#sz8 .redb{margin:clamp(80px,12vh,160px) 0;background:var(--red);color:var(--bg);border-radius:20px;padding:clamp(48px,7vw,112px) clamp(24px,5vw,80px)}#sz8 .redb ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}#sz8 .redb li{text-align:center;padding:0 clamp(12px,2vw,32px)}#sz8 .redb li+li{border-left:1px solid rgba(10,10,11,.25)}#sz8 .redb b{display:block;font:600 clamp(56px,9vw,140px)/.9 var(--sans);letter-spacing:-.045em;font-variant-numeric:tabular-nums;white-space:nowrap}#sz8 .redb span{display:block;margin-top:14px;font-size:16px;line-height:1.4;letter-spacing:.02em}@media (max-width:699px){#sz8 .redb ul{grid-template-columns:1fr 1fr;row-gap:36px}#sz8 .redb li:nth-child(3){grid-column:1/-1;border-left:0;border-top:1px solid rgba(10,10,11,.25);padding-top:32px}}#sz8 .idx{scroll-margin-top:72px}#sz8 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:clamp(24px,3vw,40px)}#sz8 .chip{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--ink);font:500 16px/1 var(--sans);white-space:nowrap;cursor:pointer;transition:background-color .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease)}#sz8 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}@media (hover:hover) and (pointer:fine){#sz8 .chip:hover{border-color:var(--line2)}}#sz8 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}#sz8 .ic>article{height:100%;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:border-color .6s var(--ease)}#sz8 .ic.x,#sz8 .ic.off{display:none}#sz8 .th{margin:12px 12px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0e0e10}#sz8 .tb{display:flex;align-items:center;gap:5px;height:20px;padding:0 10px;border-bottom:1px solid var(--line);background:#161618}#sz8 .tb i{width:6px;height:6px;border-radius:50%;background:rgba(242,239,234,.18)}#sz8 .th.doc .tb i{visibility:hidden}#sz8 .ti{position:relative;aspect-ratio:16/10;overflow:hidden}#sz8 .ti img{width:100%;height:100%;object-fit:cover;object-position:top}#sz8 .pv{position:absolute;left:50%;top:50%;translate:-50% -50%;padding:8px 14px;border:1px solid var(--line2);border-radius:999px;background:rgba(10,10,11,.6);font-size:13px;line-height:1;color:var(--ink);letter-spacing:.02em;white-space:nowrap}#sz8 .th.lt img{filter:brightness(.82) contrast(1.05);transition:transform .6s var(--ease),filter .4s var(--ease)}@media (hover:hover) and (pointer:fine){#sz8 .ic>article:hover{border-color:var(--line2)}#sz8 .ic>article:hover .th img{--hs:1.03;filter:none}}#sz8 .ic h3{margin:20px 22px 0;font:600 20px/1.25 var(--sans);letter-spacing:-.01em}#sz8 .ic .o{margin:8px 22px 0;font-size:18px;line-height:1.5;color:var(--muted)}#sz8 .stk{display:flex;flex-wrap:wrap;gap:6px;margin:16px 22px 0}#sz8 .stk li{font-size:12px;line-height:1;padding:6px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}#sz8 .ic .lk{display:flex;flex-wrap:wrap;align-items:center;gap:0 20px;margin:auto 22px 0;padding:14px 0 10px}#sz8 .ic .lk a{display:inline-flex;align-items:center;min-height:44px;font:500 17px/1 var(--sans);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:5px}#sz8 .ic .lk .priv{display:inline-flex;align-items:center;min-height:44px}@media (hover:hover) and (pointer:fine){#sz8 .ic .lk a:hover{text-decoration-color:currentColor}}#sz8 .ic.solo{grid-column:1/-1}#sz8 .ic.solo>article{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));grid-template-rows:auto auto auto 1fr;column-gap:clamp(16px,2vw,24px);align-content:start}#sz8 .ic.solo .th{grid-column:1;grid-row:1/span 4;margin:12px 0 12px 12px;align-self:start}#sz8 .ic.solo>article>:not(.th){grid-column:2/-1;margin-left:0}#sz8 .ic.solo .lk{margin-top:8px;align-self:start}#sz8 .more{margin-top:clamp(24px,3vw,40px);text-align:center}#sz8 .more[hidden]{display:none}@media (max-width:1099px){#sz8 .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:699px){#sz8 .grid{grid-template-columns:1fr}#sz8 .chips{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1*var(--g));padding:0 var(--g) 4px;scroll-padding-inline:var(--g);scrollbar-width:none;overscroll-behavior-x:contain}#sz8 .chips::-webkit-scrollbar{display:none}#sz8 .chip{scroll-snap-align:start;flex:none}#sz8 .chips{-webkit-mask-image:linear-gradient(to right,#000 85%,transparent);mask-image:linear-gradient(to right,#000 85%,transparent)}}#sz8 .contact{padding-top:clamp(96px,14vh,180px);scroll-margin-top:72px}#sz8 .contact .sh{margin-bottom:20px}#sz8 .cc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px);align-items:stretch}#sz8 .cbox{display:flex;flex-direction:column;min-width:0}#sz8 .cbox h3{font:600 clamp(26px,2.4vw,34px)/1.1 var(--sans);letter-spacing:-.02em}#sz8 .cbox>p{margin:8px 0 18px;color:var(--muted)}#sz8 .fbox{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:24px}#sz8 .cbox iframe{display:block;width:100%;border:0;background:var(--bg)}#sz8 .fbox iframe{height:860px}#sz8 .fbox:not(.kbox) iframe{margin-top:28px}#sz8 .kclip{height:701px;overflow:hidden}#sz8 .cbox iframe.k{display:block;height:731px;margin-top:-12px;clip-path:inset(2px 2px 0 2px round 8px)}#sz8 .hours{display:flex;align-items:center;gap:10px;margin-bottom:clamp(28px,3vw,40px);font-size:16px;line-height:1.5;color:var(--muted)}#sz8 .hours svg{width:18px;height:18px;flex:none}@media (max-width:1099px){#sz8 .cc{grid-template-columns:1fr;gap:56px}}@media (max-width:699px){#sz8 .fbox{padding:16px}}#sz8 .made{padding-top:clamp(96px,14vh,180px);scroll-margin-top:72px}#sz8 .made .sh{margin-bottom:16px}#sz8 .mi{max-width:46ch;color:var(--muted);margin-bottom:clamp(28px,3vw,40px)}#sz8 .skills{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:clamp(24px,3vw,40px)}#sz8 .sk{display:grid;grid-template-columns:minmax(180px,1fr) 2fr 2fr;gap:8px 32px;align-items:baseline;padding:22px 0}#sz8 .sk+.sk{border-top:1px solid var(--line)}#sz8 .skl{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}#sz8 .sks{color:var(--muted)}#sz8 .sks{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px}#sz8 .sks a{display:inline-flex;align-items:center;min-height:44px;white-space:nowrap;text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:5px}@media (hover:hover) and (pointer:fine){#sz8 .sks a:hover{text-decoration-color:currentColor}}#sz8 .mks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}#sz8 .mk{scroll-margin-top:96px}#sz8 .mk>article{position:relative;height:100%;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0 clamp(16px,2vw,24px);background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:border-color .6s var(--ease)}#sz8 .mk>article::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .5s ease;background:radial-gradient(520px circle at var(--mx,50%) var(--my,50%),rgba(242,239,234,.07),rgba(242,239,234,0) 60%)}html.tilt #sz8 .mk>article:hover::after{opacity:1}@media (hover:hover) and (pointer:fine){#sz8 .mk>article:hover{border-color:var(--line2)}}#sz8 .mph{margin:12px 0 12px 12px;border:1px solid var(--line);border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:#0e0e10;align-self:start}#sz8 .mph img{width:100%;height:100%;object-fit:cover}#sz8 .mt{display:flex;flex-direction:column;padding:22px 22px 10px 0}#sz8 .mk .tag,#sz8 .mr .with{font-size:13px;color:var(--muted)}#sz8 .mk h3{margin-top:10px;font:600 22px/1.25 var(--sans);letter-spacing:-.01em}#sz8 .mk .o,#sz8 .mr .o{margin-top:8px;font-size:18px;line-height:1.5;color:var(--muted)}#sz8 .mk .with{margin-top:14px;font-size:14px;line-height:1.5;color:var(--muted)}#sz8 .mk .lk{margin-top:auto;padding-top:14px}#sz8 .mk .priv{display:inline-flex;align-items:center;min-height:44px}#sz8 .also{margin:clamp(40px,5vw,64px) 0 0;font:400 13px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}#sz8 .mrs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(16px,2vw,24px)}#sz8 .mr{padding:20px 0;border-top:1px solid var(--line);scroll-margin-top:96px}#sz8 .mr h3{font:600 20px/1.25 var(--sans);letter-spacing:-.01em}#sz8 .mr .with{margin-top:10px}#sz8 .slot{outline:1px dashed var(--line2);outline-offset:-1px}#sz8 .sk.slot{padding-inline:16px}#sz8 .mk.slot .mph{display:grid;place-items:center;padding:16px;text-align:center;font-size:13px;color:var(--muted)}@media (max-width:1099px){#sz8 .mks{grid-template-columns:1fr}#sz8 .sk{grid-template-columns:1fr 2fr}#sz8 .sks{grid-column:2}}@media (max-width:699px){#sz8 .sk{grid-template-columns:1fr}#sz8 .sks{grid-column:auto}#sz8 .mk>article{grid-template-columns:1fr}#sz8 .mph{margin:12px 12px 0}#sz8 .mt{padding:20px 22px 10px}#sz8 .mrs{grid-template-columns:1fr}#sz8 .mk .tag,#sz8 .mr .with,#sz8 .also{font-size:14px}}#sz8 .foot{position:relative;z-index:1;background:var(--bg);padding:clamp(64px,9vh,112px) var(--g) 24px;border-top:1px solid var(--line)}#sz8 .fa{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 32px;padding-bottom:32px;border-bottom:1px solid var(--line)}#sz8 .fn{font:600 clamp(28px,3.2vw,44px)/1.1 var(--sans);letter-spacing:-.025em}#sz8 .fr{margin-top:10px;color:var(--muted)}#sz8 .fpl{color:var(--muted)}#sz8 .fc{display:flex;flex-direction:column;align-items:flex-end;gap:6px}#sz8 .fc .em{display:inline-flex;align-items:center;min-height:44px;font:500 18px/1 var(--sans)}#sz8 .fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px clamp(16px,2vw,24px);padding:32px 0;border-bottom:1px solid var(--line)}#sz8 .fh{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}#sz8 .fcols a{display:inline-flex;align-items:center;min-height:44px;font:500 18px/1 var(--sans)}@media (hover:hover) and (pointer:fine){#sz8 .fcols a:hover,#sz8 .fc .em:hover{text-decoration:underline;text-underline-offset:5px}}#sz8 .fbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:24px;font-size:13px;color:var(--muted)}@media (max-width:699px){#sz8 .fa{display:block}#sz8 .fc{align-items:flex-start;margin-top:24px}#sz8 .fcols{grid-template-columns:1fr 1fr}#sz8 .fcols>div:last-child{grid-column:1/-1}#sz8 .fcols>div:last-child ul{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}#sz8 .fbar{display:grid;font-size:14px}}@media (max-width:699px){#sz8 .how summary,#sz8 .hours{font-size:18px}}html,body{margin:0;background:#0A0A0B}html{overflow-x:clip}</style><script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/Flip.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script></head><body><div id="sz8" data-title="Shinzuu | AI automation, CRM workflows and Claude Code tools"><header class="nav"><a class="wm" href="#top">Nishadul “Shinzuu” Islam</a><div class="r"><a class="pill glass dk" href="#work">Work</a><a class="pill red dk" href="#contact">Book a call</a><button class="pill glass ph" type="button" data-menu aria-expanded="false" aria-controls="sz8-sheet">Menu</button><a class="pill red ph" href="#contact">Book</a></div></header><div class="sheet" id="sz8-sheet" role="dialog" aria-modal="true" aria-label="Menu" hidden><div class="top"><span class="wm">Nishadul “Shinzuu” Islam</span><div class="r"><button class="pill glass" type="button" data-close>Close</button></div></div><nav aria-label="Sections"><a href="#work">Work</a><a href="#index">More work</a><a href="#made">Things I’ve made</a><a href="#contact">Contact</a></nav><a class="pill red big" href="#contact">Book a call</a><p class="sdir mono"><a class="em" data-u="shinzuu.dev" data-d="gmail.com" href="#contact">shinzuu.dev (at) gmail.com</a><a href="https://www.linkedin.com/in/nishadul-i-363786369/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/Shinzuu" target="_blank" rel="noopener">GitHub</a></p></div><div class="stage" id="top"><div class="layer" aria-hidden="true"><picture class="poster"><source media="(max-width: 699px)" srcset="posters/hero-p0-780.webp" width="780" height="1688"><img src="posters/hero-p0-1440.webp" width="1440" height="900" alt="" fetchpriority="high" decoding="async"></picture><picture class="poster p1"><source media="(max-width: 699px)" srcset="posters/core-p1-780.webp"><img src="posters/core-p1-1440.webp" width="1440" height="900" alt="" loading="lazy" decoding="async"></picture><canvas class="cv"></canvas><div class="vig"></div><div class="lbls"><span class="mono">mail</span><span class="mono">chat</span><span class="mono">meeting notes</span><span class="mono">calendar</span><span class="mono">task board</span><span class="mono">Claude Code sessions</span></div><div class="caps"><p class="cnt mono"><span>01</span> / 03</p><i class="prog"><b></b></i><p>Six sources come in</p><p>Seven plain rules sort them</p><p>One screen comes out</p></div></div><section class="hero" aria-labelledby="sz8-h1"><div class="hc"><p class="eyebrow mono">AI automation engineer · Chattogram · GMT+6</p><p class="clock mono" data-clock>Dhaka time · calls Mon &amp; Tue, 7–10 pm</p><h1 class="hl" id="sz8-h1"><span class="ln"><span>Repetitive work,</span></span><span class="ln"><span>automated.</span></span></h1><p class="lede">I take the manual processes your team repeats every day and turn them into automations that run on their own.</p><p class="acts"><a class="pill red big" href="#contact">Book a call</a><a class="tl" href="#work">See the work <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 2v11M3.5 8.5 8 13l4.5-4.5"/></svg></a></p></div><p class="hud tr mono" data-clock>Dhaka time · calls Mon &amp; Tue, 7–10 pm</p><p class="hud br mono">27 projects · 1,466 tests</p></section><section class="scene" aria-label="How Lilith works"><div class="steps-wrap"><picture><source media="(max-width: 699px)" srcset="posters/core-p1-780.webp"><img src="posters/core-p1-1440.webp" width="1440" height="900" alt="" loading="lazy" decoding="async"></picture><ol class="steps sr"><li>Six sources come in</li><li>Seven plain rules sort them</li><li>One screen comes out</li></ol></div></section></div><main id="work"><section class="feat" aria-labelledby="sz8-sw"><p class="kick mono">01 · Work</p><h2 class="sh" id="sz8-sw" data-split>Selected work</h2><div class="lead"><article class="card wide" aria-labelledby="sz8-lilith"><figure class="media"><div class="bf"><p class="bar mono" aria-hidden="true"><i></i><i></i><i></i><span>shinzuu.github.io/lilith-showcase</span></p><div class="shot"><picture><source media="(max-width: 699px)" srcset="media/pf8-lilith-m.webp" width="780" height="975"><img src="media/pf8-lilith-d.webp" width="1512" height="945" alt="Lilith: screenshot of the showcase" loading="lazy" decoding="async"></picture></div></div><figcaption class="note mono">Showcase with invented clients and items.</figcaption></figure><div class="txt"><p class="tag mono">Agent · Claude Code · 545 tests</p><h3 id="sz8-lilith">Lilith</h3><p class="pitch">A chief of staff that reads six sources, so I read one screen.</p><ul class="stats"><li><b data-count="6" data-suf="" aria-hidden="true">6</b><span class="sr">6 </span><span>sources, polled with saved cursors</span></li><li><b data-count="7" data-suf="" aria-hidden="true">7</b><span class="sr">7 </span><span>plain rules, no model</span></li><li><b data-count="545" data-suf="" aria-hidden="true">545</b><span class="sr">545 </span><span>tests</span></li></ul><details class="how"><summary>How it works<i aria-hidden="true"></i></summary><div class="hb"><div><p>It polls mail, Discord, meeting transcripts, the calendar, the team&#x27;s task hub and the Claude Code sessions I have running. One reader model, with every tool switched off, is the only part that sees raw text; seven plain rules then decide what needs me now, with no model in that loop. Its own actions wait in a review queue, and it never writes to an outside service.</p></div></div></details><p class="links"><a class="pill glass" href="https://shinzuu.github.io/lilith-showcase/" target="_blank" rel="noopener">View showcase</a></p></div></article></div><div class="pair"><article class="card" aria-labelledby="sz8-atlas"><figure class="media"><div class="bf"><p class="bar mono" aria-hidden="true"><i></i><i></i><i></i><span>atlas</span></p><div class="shot"><picture><source media="(max-width: 699px)" srcset="media/pf8-atlas-m-v4.webp" width="780" height="975"><img src="media/pf8-atlas-d-v4.webp" width="1512" height="944" alt="Atlas: the bot conversation and overview, with invented amounts" loading="lazy" decoding="async"></picture></div></div><figcaption class="note mono">The bot itself is private.</figcaption></figure><div class="txt"><p class="tag mono">Cloudflare Workers · D1 · Gemini</p><h3 id="sz8-atlas">Atlas</h3><p class="pitch">A money assistant that never does its own sums.</p><ul class="stats"><li><b data-count="0" data-suf="" aria-hidden="true">0</b><span class="sr">0 </span><span>runtime dependencies</span></li><li><b data-count="42" data-suf="" aria-hidden="true">42</b><span class="sr">42 </span><span>test files</span></li><li><b data-count="1" data-suf=" min" aria-hidden="true">1 min</b><span class="sr">1 min </span><span>cron cycle on D1</span></li></ul><details class="how"><summary>How it works<i aria-hidden="true"></i></summary><div class="hb"><div><p>You tell it on Telegram, by voice or text, what you spent. The model only reads the sentence and words the reply; every number comes from tested code that counts in whole paisa, never floats, so the guard against credit-card debt is never wrong about money. A Cloudflare Worker with D1 runs a cron every minute, so reminders and the morning digest arrive before you ask.</p></div></div></details><p class="links"><span class="priv">Private repo</span></p></div></article><article class="card" aria-labelledby="sz8-atelier"><figure class="media"><div class="bf"><p class="bar mono" aria-hidden="true"><i></i><i></i><i></i><span>atelier · data model</span></p><div class="shot"><picture><source media="(max-width: 699px)" srcset="media/pf8-atelier-m.webp" width="780" height="975"><img src="media/pf8-atelier-d-v4.webp" width="1512" height="944" alt="atelier: two tables of the data model, from the repo" loading="lazy" decoding="async"></picture></div></div><figcaption class="note mono">The data model, from the repo. The shop runs locally.</figcaption></figure><div class="txt"><p class="tag mono">Medusa v2 · Next.js 15 · Postgres · 131 checks</p><h3 id="sz8-atelier">atelier</h3><p class="pitch">A whole shop for Bangladesh: taka, cash on delivery, English and Bangla.</p><ul class="stats"><li><b data-count="11" data-suf="" aria-hidden="true">11</b><span class="sr">11 </span><span>custom modules</span></li><li><b data-count="131" data-suf="" aria-hidden="true">131</b><span class="sr">131 </span><span>checks</span></li><li><b data-count="37" data-suf="" aria-hidden="true">37</b><span class="sr">37 </span><span>pages swept</span></li></ul><details class="how"><summary>How it works<i aria-hidden="true"></i></summary><div class="hb"><div><p>Medusa v2 for the backend and admin, a Next.js 15 storefront, Postgres and Valkey, all in Docker. Eleven modules of its own, among them a points ledger for loyalty and referrals, flash sales on price lists, trigram search that still finds “hevyweihgt”, web push, an email outbox and restock alerts. A 131-check suite and a sweep of all 37 pages run before anything ships.</p></div></div></details><p class="links"><span class="priv">Private repo</span></p></div></article></div></section><section class="redb" aria-label="In numbers"><ul><li><b data-count="27">27</b><span class="mono">projects</span></li><li><b data-count="4">4</b><span class="mono">live apps people use</span></li><li><b data-count="1466">1,466</b><span class="mono">automated tests</span></li></ul></section><section class="idx" id="index" aria-labelledby="sz8-ix"><p class="kick mono">02 · More work</p><h2 class="sh" id="sz8-ix" data-split>More work</h2><div class="chips" role="group" aria-label="Filter by category"><button class="chip" type="button" data-f="all" aria-pressed="true">All</button><button class="chip" type="button" data-f="tools" aria-pressed="false">Tools for Claude Code (9)</button><button class="chip" type="button" data-f="apps" aria-pressed="false">Apps people use (7)</button><button class="chip" type="button" data-f="data" aria-pressed="false">Data engineering (4)</button><button class="chip" type="button" data-f="research" aria-pressed="false">Research (2)</button><button class="chip" type="button" data-f="hack" aria-pressed="false">Hackathon 2026 (2)</button></div><ul class="grid" aria-live="polite"><li class="ic" data-g="tools"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-discord-reader.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>discord-reader</h3><p class="o">Claude Code in Discord: a private bot it drives on request, or a connector on your own account. Every send waits for your approval.</p><ul class="stk mono"><li>MCP server</li><li>23 actions</li><li>144 tests</li></ul><p class="lk"><a href="https://shinzuu.github.io/discord-reader-showcase/" target="_blank" rel="noopener">View showcase</a><span class="priv">Private repo</span></p></article></li><li class="ic" data-g="apps"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-kothay-khabo-v4.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>kothay-khabo</h3><p class="o">Where to eat in Chattogram: pick who is eating and a budget, and get places ranked by how good the food is, priced for the group.</p><ul class="stk mono"><li>React</li><li>TypeScript</li><li>Offline PWA</li></ul><p class="lk"><a href="https://kothay-khabo.pages.dev" target="_blank" rel="noopener">View live site</a><span class="priv">Private repo</span></p></article></li><li class="ic" data-g="tools"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-anvil.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>Anvil</h3><p class="o">Builds, audits and debugs HighLevel accounts from Claude Code, and reads every write back before calling it done.</p><ul class="stk mono"><li>Claude Code plugin</li><li>9 skills</li><li>556 tests</li></ul><p class="lk"><a href="https://shinzuu.github.io/anvil-showcase/" target="_blank" rel="noopener">View showcase</a><span class="priv">Private repo</span></p></article></li><li class="ic" data-g="apps"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-suggestkoro-v4.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>suggestkoro</h3><p class="o">Which phone to buy in Bangladesh: rank what matters, set a budget, get three phones you can buy today.</p><ul class="stk mono"><li>Astro</li><li>English and Bangla</li></ul><p class="lk"><a href="https://suggestkoro.shinzuu-dev.workers.dev" target="_blank" rel="noopener">View live site</a><span class="priv">Private repo</span></p></article></li><li class="ic" data-g="data"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-episcope.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>episcope</h3><p class="o">Surveillance and forecasting platform: bronze, silver and gold layers, a privacy layer with k-anonymity, backtested forecasts.</p><ul class="stk mono"><li>Python</li><li>Data quality</li><li>Linear programming</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic" data-g="research"><article><figure class="th doc"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-thesis-v5.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>B.Sc. thesis</h3><p class="o">External validation of medical AI: a brain–computer speller for people with ALS, and skin-cancer triage from a phone photo. Results under review.</p><ul class="stk mono"><li>Computer Science and Engineering</li><li>Python</li><li>Pre-registered tests</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="tools"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-john-loom.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>john-loom</h3><p class="o">Narrates a script through a virtual microphone and drives the browser in sync, so product demos record themselves.</p><ul class="stk mono"><li>Local TTS</li><li>Playwright</li><li>PulseAudio</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="tools"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-gmail-mcp.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>gmail-mcp</h3><p class="o">Search, draft, send and file mail across several Gmail accounts from Claude Code, each send behind an approval prompt.</p><ul class="stk mono"><li>MCP server</li><li>40 tools</li><li>203 tests</li></ul><p class="lk"><a href="https://shinzuu.github.io/gmail-mcp-showcase/" target="_blank" rel="noopener">View showcase</a><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="tools"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-voxtype-cleanup.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>voxtype-cleanup</h3><p class="o">Cleans up dictated text in under two seconds, and if anything fails it hands back the original text, always.</p><ul class="stk mono"><li>Shell</li><li>stdin to stdout</li><li>fail-safe</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="tools"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-taskboard.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>taskboard</h3><p class="o">Task board and time logging from the terminal, with a guard that stops the same 12 hours being logged twice.</p><ul class="stk mono"><li>Claude Code command</li><li>18 tests</li></ul><p class="lk"><a href="https://shinzuu.github.io/taskboard-showcase/" target="_blank" rel="noopener">View showcase</a><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="tools"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-claude-skills.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>claude-skills</h3><p class="o">Rebuilds a whole Claude Code setup, with skills, plugins, MCP servers and hooks, on a new machine with one script.</p><ul class="stk mono"><li>Bash</li><li>idempotent</li><li>dry run</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="tools"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-apeiron.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>apeiron</h3><p class="o">Tested whether evidence gates and a fresh-context critic make Claude Code build better. In 12 A/B runs it lost, and the write-up says so.</p><ul class="stk mono"><li>Eval harness</li><li>A/B runs</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="tools"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-ff.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>ff</h3><p class="o">Pulls meeting transcripts from Fireflies into Claude Code, read-only, so nothing in the account can change.</p><ul class="stk mono"><li>CLI</li><li>4 commands</li><li>read-only</li></ul><p class="lk"><a href="https://shinzuu.github.io/ff-showcase/" target="_blank" rel="noopener">View showcase</a><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="apps"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-prism-v4.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>Prism</h3><p class="o">Seventy UI components that take their whole palette from an image, each shipped with the prompt that built it.</p><ul class="stk mono"><li>Astro</li><li>React</li><li>OKLCH colour</li></ul><p class="lk"><a href="https://github.com/Shinzuu/prism" target="_blank" rel="noopener">View source</a></p></article></li><li class="ic x" data-g="apps"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-kothay-jai.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>kothay-jai</h3><p class="o">A Chattogram map of food and parks whose real work is throwing out rows it cannot verify.</p><ul class="stk mono"><li>Astro</li><li>OpenStreetMap</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="apps"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-lector-v4b.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>Lector</h3><p class="o">A Chrome extension that reads pages and PDFs aloud and explains slides like a tutor.</p><ul class="stk mono"><li>Chrome extension</li></ul><p class="lk"><a href="https://shinzuu.github.io/lector/" target="_blank" rel="noopener">View live site</a><a href="https://github.com/Shinzuu/lector" target="_blank" rel="noopener">View source</a></p></article></li><li class="ic x" data-g="apps"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-quickxs.webp" width="900" height="562" alt="" loading="lazy" decoding="async"><span class="pv mono">Screens private</span></div></figure><h3>QuickXS</h3><p class="o">A class schedule that installs like an app, with live updates and notifications.</p><ul class="stk mono"><li>Svelte</li><li>Supabase</li><li>PWA</li></ul><p class="lk"><a href="https://quickxs-pwa.pages.dev" target="_blank" rel="noopener">View live site</a><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="apps"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-nid-print.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>nid-print</h3><p class="o">Lays scanned PDF pages onto A4 offline without re-rendering them, so Bangla text prints exactly as scanned.</p><ul class="stk mono"><li>Python</li><li>pypdf</li><li>Offline</li></ul><p class="lk"><span class="priv">Private repo</span></p></article></li><li class="ic x" data-g="data"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-openpowerlifting.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>OpenPowerlifting on Hadoop</h3><p class="o">Eight analyses of a 4-million-row archive, every number checked against an independent recompute.</p><ul class="stk mono"><li>Hadoop 3.4.1</li><li>MapReduce</li><li>Pig</li></ul><p class="lk"><a href="https://github.com/Shinzuu/openpowerlifting-hadoop-analysis" target="_blank" rel="noopener">View source</a></p></article></li><li class="ic x" data-g="data"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-youtube-hadoop.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>YouTube data on Hadoop</h3><p class="o">Three MapReduce and five Pig jobs, each with its code, run log and verified result.</p><ul class="stk mono"><li>Hadoop</li><li>Pig</li></ul><p class="lk"><a href="https://shinzuu.github.io/bdal-youtube-analysis/" target="_blank" rel="noopener">View live site</a><a href="https://github.com/Shinzuu/bdal-youtube-analysis" target="_blank" rel="noopener">View source</a></p></article></li><li class="ic x" data-g="data"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-hadoop-kit.webp" width="900" height="562" alt="" loading="lazy" decoding="async"></div></figure><h3>Hadoop Lab Kit</h3><p class="o">From a blank machine to a working cluster, with every command and expected output, for Linux and Windows.</p><ul class="stk mono"><li>Hadoop</li><li>HDFS</li><li>WSL2</li></ul><p class="lk"><a href="https://github.com/Shinzuu/hadoop-bdal-lab-kit" target="_blank" rel="noopener">View source</a></p></article></li><li class="ic x" data-g="research"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-bakeoff.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>Free model bake-off</h3><p class="o">Which free LLM should run a tool-calling assistant? 126 graded attempts across six free models, written up interactively.</p><ul class="stk mono"><li>Evaluation</li><li>6 models</li></ul><p class="lk"><a href="https://shinzuu.github.io/free-model-bakeoff/" target="_blank" rel="noopener">View live site</a><a href="https://github.com/Shinzuu/free-model-bakeoff" target="_blank" rel="noopener">View source</a></p></article></li><li class="ic x" data-g="hack"><article><figure class="th lt"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-p08.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>Result Processor</h3><p class="o">Turns a school&#x27;s raw marks into GPAs and shows the rule behind every number, including the one failed subject that cancels a strong average.</p><ul class="stk mono"><li>80 students</li><li>Per-student trace</li><li>No login</li></ul><p class="lk"><a href="https://lsh26-t036-p08.pages.dev" target="_blank" rel="noopener">View live site</a><a href="https://github.com/Shinzuu/lsh26-t036-p08" target="_blank" rel="noopener">View source</a></p></article></li><li class="ic x" data-g="hack"><article><figure class="th"><p class="tb" aria-hidden="true"><i></i><i></i><i></i></p><div class="ti"><img src="posters-v8/pf8g-p10.webp" width="912" height="570" alt="" loading="lazy" decoding="async"></div></figure><h3>Recharge Advisor</h3><p class="o">Rebuilds a prepaid meter&#x27;s balance day by day on the real tariff, then says when it runs out and what to recharge.</p><ul class="stk mono"><li>Slab tariff</li><li>VAT and fixed charges</li><li>No login</li></ul><p class="lk"><a href="https://lsh26-t036-p10.pages.dev" target="_blank" rel="noopener">View live site</a><a href="https://github.com/Shinzuu/lsh26-t036-p10" target="_blank" rel="noopener">View source</a></p></article></li></ul><p class="more"><button class="pill glass big" type="button" data-all aria-expanded="false">Show 18 more</button></p></section><section class="made" id="made" aria-labelledby="sz8-mk"><p class="kick mono">03 · Things I’ve made</p><h2 class="sh" id="sz8-mk" data-split>Things I’ve made</h2><p class="mi">Outside the software: circuits, keyboards and repairs I build and debug at my own bench.</p><ul class="skills" aria-label="Hardware skills"><li class="sk"><p class="skl mono">Hardware prototyping</p><p class="skt">Breadboard to perfboard: wired, soldered, flashed and debugged.</p><p class="sks">Seen in: <a href="#mk-macropad">RP2040 macropad</a><a href="#mk-battery">Battery autopsy</a><a href="#mk-pico-pad">15-key Pico macropad</a><a href="#mk-pro-micro">Pro Micro, now USB-C</a></p></li></ul><ul class="mks"><li class="mk" id="mk-macropad"><article><figure class="mph"><img src="media/pf9-macropad-900.webp" srcset="media/pf9-macropad-480.webp 480w, media/pf9-macropad-900.webp 900w" sizes="(max-width: 699px) 92vw, 300px" width="900" height="1125" alt="The 4×3 macropad on perfboard: the OLED shows the test layer, a rotary knob, twelve coloured keys." loading="lazy" decoding="async"></figure><div class="mt"><p class="tag mono">2024 · Built</p><h3>RP2040 macropad</h3><p class="o">Twelve keys, a small screen and a knob that switches layers between apps; hand-soldered on perfboard.</p><p class="with mono">Made with: RP2040 · SH1106 OLED · Rotary encoder · Arduino</p><p class="lk"><span class="priv">Private repo</span></p></div></article></li><li class="mk" id="mk-battery"><article><figure class="mph"><img src="media/pf9-battery-900.webp" srcset="media/pf9-battery-480.webp 480w, media/pf9-battery-900.webp 900w" sizes="(max-width: 699px) 92vw, 300px" width="900" height="1125" alt="The battery&#x27;s protection board between two of its cells, with its 8-pin connector. Labels blurred." loading="lazy" decoding="async"></figure><div class="mt"><p class="tag mono">2026 · Diagnosed</p><h3>Battery autopsy</h3><p class="o">Opened a dead laptop battery, built an SMBus reader on an Arduino to question its fuel-gauge chip, found the lock that killed it, and saved the cells.</p><p class="with mono">Made with: Arduino Leonardo · SMBus · TI bq gauge · Calipers</p><p class="lk"><span class="priv">Private repo</span></p></div></article></li></ul><h3 class="also mono">Also on the bench</h3><ul class="mrs"><li class="mr" id="mk-pico-pad"><h3>15-key Pico macropad</h3><p class="o">Fifteen switches wired straight to the Pico, remappable live in the browser with Vial.</p><p class="with mono">2026 · Built · Raspberry Pi Pico · Vial-QMK · Printed-and-cut plate</p></li><li class="mr" id="mk-pro-micro"><h3>Pro Micro, now USB-C</h3><p class="o">Gave a clone Pro Micro with a dead port a USB-C connector, wired the way the USB-C spec needs.</p><p class="with mono">2026 · Repaired · USB-C breakout · 5.1 kΩ CC resistors · avrdude</p></li></ul></section><section class="contact" id="contact" aria-labelledby="sz8-ct"><p class="kick mono">04 · Contact</p><h2 class="sh" id="sz8-ct" data-split>Have a process that should run itself?</h2><p class="hours"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.3"/><path d="M8 4.6V8l2.4 1.6"/></svg>Calls Monday and Tuesday, 7:00 to 10:00 pm Dhaka (GMT+6). Book at least 12 hours ahead.</p><div class="cc"><div class="cbox"><h3>Send a request</h3><p>Name, email and what you need. Budget is optional.</p><div class="fbox"><iframe data-src="https://api.leadconnectorhq.com/widget/form/YOUR_FORM_ID" class="f" title="Send a request" scrolling="no"></iframe></div></div><div class="cbox"><h3>Book a call</h3><p>Thirty minutes on video. Pick a time, then your details.</p><div class="fbox kbox"><div class="kclip"><iframe data-src="https://api.leadconnectorhq.com/widget/booking/YOUR_CALENDAR_ID" class="k" title="Book a call" scrolling="no"></iframe></div></div></div></div></section></main><footer class="foot"><div class="fa"><div class="fs"><p class="fn">Nishadul “Shinzuu” Islam</p><p class="fr">AI automation, and hardware I build by hand.</p><p class="fpl">Chattogram · GMT+6</p></div><div class="fc"><a class="pill red big" href="#contact">Book a call</a><a class="em" data-u="shinzuu.dev" data-d="gmail.com" href="#contact">shinzuu.dev (at) gmail.com</a></div></div><div class="fcols"><div><p class="fh mono">Contact</p><ul><li><a class="em" data-k data-u="shinzuu.dev" data-d="gmail.com" href="#contact">Email</a></li><li><a href="#contact">Book a call</a></li></ul></div><div><p class="fh mono">Elsewhere</p><ul><li><a href="https://github.com/Shinzuu" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://www.linkedin.com/in/nishadul-i-363786369/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div><div><p class="fh mono">On this page</p><ul><li><a href="#work">Work</a></li><li><a href="#index">More work</a></li><li><a href="#made">Things I’ve made</a></li><li><a href="#top">Back to top ↑</a></li></ul></div></div><div class="fbar mono"><span>© 2026 Nishadul Islam</span><span data-fclock>Dhaka · GMT+6</span><span>3D: three.js (MIT). Motion: GSAP, Lenis (MIT).</span></div></footer></div><script>var root = document.getElementById("sz8"), html = document.documentElement;
+if (!document.title || /temporary/i.test(document.title)) document.title = root.dataset.title;
+(function() {
+  for (var el = root.parentElement; el && el !== document.body; el = el.parentElement) {
+    var cs = getComputedStyle(el);
+    if (cs.overflowX !== "visible" || cs.overflowY !== "visible") el.style.overflow = "visible";
+  }
+})();
+root.querySelectorAll("a.em").forEach(function(a) {
+  var m = a.dataset.u + "@" + a.dataset.d;
+  a.href = "mailto:" + m;
+  if (!a.hasAttribute("data-k")) a.textContent = m;
+});
+(function() {
+  var fs = root.querySelectorAll("iframe[data-src]");
+  function go(f) {
+    if (!f.src) f.src = f.dataset.src;
+  }
+  if (!("IntersectionObserver" in window)) {
+    fs.forEach(go);
+    return;
+  }
+  var io = new IntersectionObserver(function(es) {
+    es.forEach(function(x) {
+      if (x.isIntersecting) {
+        go(x.target);
+        io.unobserve(x.target);
+      }
+    });
+  }, { rootMargin: "600px 0px" });
+  fs.forEach(function(f) {
+    io.observe(f);
+  });
+})();
+(function() {
+  var MID = "[iFrameSizer]", KCUT = 18;
+  function init2(f) {
+    if (f.src) f.contentWindow.postMessage(MID + f.id + ":0:false:false:32:true:true:0:bodyOffset:transparent:null:0:false:parent:scroll:false", "*");
+  }
+  var fs = [].slice.call(root.querySelectorAll(".cbox iframe"));
+  fs.forEach(function(f, i) {
+    f.id = "sz8-w" + i;
+    f.setAttribute("scrolling", "no");
+    f.addEventListener("load", function() {
+      init2(f);
+    });
+  });
+  addEventListener("message", function(e) {
+    if (!/leadconnectorhq\.com$/.test(e.origin) || typeof e.data !== "string") return;
+    var f = fs.filter(function(x) {
+      return x.contentWindow === e.source;
+    })[0];
+    if (e.data === "[iFrameResizerChild]Ready") {
+      if (f) init2(f);
+      return;
+    }
+    if (e.data.indexOf(MID) !== 0) return;
+    var p = e.data.slice(MID.length).split(":"), h = Math.ceil(+p[1]);
+    f = document.getElementById(p[0]) || f;
+    if (!f || !(h > 200)) return;
+    f.style.height = h + "px";
+    if (f.classList.contains("k")) f.parentElement.style.height = h - 12 - KCUT + "px";
+  });
+})();
+(function() {
+  var cs = root.querySelectorAll("[data-clock]"), fc = root.querySelectorAll("[data-fclock]");
+  if (!(cs.length + fc.length) || !window.Intl) return;
+  var f = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Dhaka", hour: "2-digit", minute: "2-digit", hour12: false });
+  function tick() {
+    var n = f.format(/* @__PURE__ */ new Date()), t = "Dhaka " + n + " · calls Mon & Tue, 7–10 pm";
+    cs.forEach(function(c) {
+      c.textContent = t;
+    });
+    fc.forEach(function(c) {
+      c.textContent = "Dhaka " + n + " · GMT+6";
+    });
+  }
+  tick();
+  setInterval(tick, 3e4);
+})();
+var lenis = null;
+(function() {
+  var btn = root.querySelector("[data-menu]"), sheet = root.querySelector("#sz8-sheet");
+  if (!btn || !sheet) return;
+  var close = sheet.querySelector("[data-close]"), bg = [].filter.call(root.children, function(el) {
+    return el !== sheet;
+  });
+  function open() {
+    sheet.hidden = false;
+    btn.setAttribute("aria-expanded", "true");
+    requestAnimationFrame(function() {
+      sheet.classList.add("open");
+    });
+    if (window.gsap && !matchMedia("(prefers-reduced-motion: reduce)").matches)
+      window.gsap.fromTo(sheet.querySelectorAll("nav a, .big, .sdir"), { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "expo.out", stagger: 0.05 });
+    if (lenis) lenis.stop();
+    html.style.overflow = "hidden";
+    bg.forEach(function(el) {
+      el.inert = true;
+    });
+    sheet.querySelector("nav a").focus();
+  }
+  function shut(focusBack) {
+    sheet.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+    html.style.overflow = "";
+    bg.forEach(function(el) {
+      el.inert = false;
+    });
+    if (lenis) lenis.start();
+    setTimeout(function() {
+      sheet.hidden = true;
+    }, 250);
+    if (focusBack) btn.focus();
+  }
+  btn.addEventListener("click", open);
+  close.addEventListener("click", function() {
+    shut(true);
+  });
+  sheet.addEventListener("click", function(e) {
+    if (e.target.closest("a")) shut(false);
+  });
+  sheet.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      shut(true);
+      return;
+    }
+    if (e.key !== "Tab") return;
+    var f = sheet.querySelectorAll("a,button"), a = f[0], z = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === a) {
+      e.preventDefault();
+      z.focus();
+    } else if (!e.shiftKey && document.activeElement === z) {
+      e.preventDefault();
+      a.focus();
+    }
+  });
+})();
+(function() {
+  var nav = root.querySelector(".nav"), on = null, q = false, work = nav.querySelector('a[href="#work"]'), secs = [root.querySelector(".feat"), root.querySelector(".idx")], spy = null;
+  function check() {
+    q = false;
+    var b = scrollY > 8;
+    if (b !== on) {
+      on = b;
+      nav.classList.toggle("bar", b);
+    }
+    var mid = innerHeight * 0.4, inW = secs.some(function(x) {
+      if (!x) return false;
+      var r = x.getBoundingClientRect();
+      return r.top < mid && r.bottom > mid;
+    });
+    if (inW !== spy) {
+      spy = inW;
+      if (work) work.setAttribute("aria-current", inW ? "true" : "false");
+    }
+  }
+  addEventListener("scroll", function() {
+    if (!q) {
+      q = true;
+      requestAnimationFrame(check);
+    }
+  }, { passive: true });
+  check();
+})();
+var capBox = root.querySelector(".caps"), caps = root.querySelectorAll(".caps p:not(.cnt)"), cnt = root.querySelector(".caps .cnt span"), capOn = -1, layer = root.querySelector(".layer"), lastP = -1;
+function ss(x, a, b) {
+  var t = Math.min(1, Math.max(0, (x - a) / (b - a)));
+  return t * t * (3 - 2 * t);
+}
+function setP(p) {
+  window.__szP = p;
+  if (Math.abs(p - lastP) > 2e-3) {
+    lastP = p;
+    layer.style.setProperty("--p", p.toFixed(3));
+    layer.style.setProperty("--s2", ss(p, 0.64, 0.8).toFixed(3));
+  }
+  var s = p < 0.09 || p >= 0.97 ? -1 : p < 0.37 ? 0 : p < 0.64 ? 1 : 2;
+  if (s === capOn) return;
+  capOn = s;
+  for (var i = 0; i < caps.length; i++) caps[i].classList.toggle("on", i === s);
+  capBox.classList.toggle("go", s >= 0);
+  if (cnt) cnt.textContent = "0" + (Math.max(s, 0) + 1);
+}
+var grid = root.querySelector(".grid"), items = grid ? [].slice.call(grid.children) : [], chips = root.querySelectorAll(".chip"), moreP = root.querySelector(".more"), filt = "all", all = false, allBtn = root.querySelector("[data-all]");
+if (allBtn) allBtn.dataset.label = allBtn.textContent;
+function layout() {
+  items.forEach(function(li) {
+    li.classList.toggle("off", filt !== "all" && li.dataset.g !== filt);
+    li.classList.toggle("x", filt === "all" && !all && items.indexOf(li) >= 6);
+  });
+  solo();
+  if (moreP) moreP.hidden = filt !== "all";
+  if (allBtn) {
+    allBtn.textContent = all ? "Show fewer" : allBtn.dataset.label;
+    allBtn.setAttribute("aria-expanded", String(all));
+  }
+}
+function solo() {
+  var cols = getComputedStyle(grid).gridTemplateColumns.split(" ").length;
+  var vis = items.filter(function(li) {
+    return !li.classList.contains("off") && !li.classList.contains("x");
+  });
+  items.forEach(function(li) {
+    li.classList.remove("solo");
+  });
+  if (cols > 1 && vis.length % cols === 1) vis[vis.length - 1].classList.add("solo");
+  grid.style.setProperty("--cols", cols);
+}
+if (grid) {
+  solo();
+  addEventListener("resize", function() {
+    solo();
+  });
+}
+function relayout(focusFirstNew) {
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches, gsap = window.gsap, Flip = window.Flip;
+  var before = items.filter(function(li) {
+    return li.offsetParent !== null;
+  });
+  if (gsap) {
+    gsap.killTweensOf(items);
+    gsap.set(items, { clearProps: "opacity,visibility,transform" });
+  }
+  if (gsap && Flip && !reduce) {
+    var h0 = grid.offsetHeight, st = Flip.getState(items);
+    grid.style.height = h0 + "px";
+    layout();
+    grid.style.height = "auto";
+    var h1 = grid.offsetHeight;
+    grid.style.height = Math.max(h0, h1) + "px";
+    var tl = gsap.timeline({ onComplete: function() {
+      grid.style.height = "";
+      window.ScrollTrigger && window.ScrollTrigger.refresh();
+    } });
+    tl.add(Flip.from(st, {
+      duration: 0.5,
+      ease: "power3.inOut",
+      absolute: true,
+      scale: false,
+      onEnter: function(els) {
+        return gsap.fromTo(els, { opacity: 0 }, { opacity: 1, duration: 0.3, delay: 0.15 });
+      },
+      onLeave: function(els) {
+        return gsap.to(els, { autoAlpha: 0, duration: 0.2 });
+      }
+    }), 0);
+    if (h1 < h0) tl.to(grid, { height: h1, duration: 0.3, ease: "power2.out" }, 0.5);
+  } else if (!reduce && grid.animate) {
+    layout();
+    grid.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 250, easing: "ease-out" });
+    window.ScrollTrigger && window.ScrollTrigger.refresh();
+  } else {
+    layout();
+    window.ScrollTrigger && window.ScrollTrigger.refresh();
+  }
+  if (focusFirstNew) {
+    var n = items.filter(function(li) {
+      return li.offsetParent !== null && before.indexOf(li) < 0;
+    })[0];
+    var h = n && n.querySelector("h3");
+    if (h) {
+      h.tabIndex = -1;
+      h.focus({ preventScroll: true });
+    }
+  }
+}
+chips.forEach(function(c) {
+  c.addEventListener("click", function() {
+    if (c.dataset.f === filt) return;
+    filt = c.dataset.f;
+    chips.forEach(function(x) {
+      x.setAttribute("aria-pressed", String(x === c));
+    });
+    relayout(false);
+  });
+});
+if (allBtn) allBtn.addEventListener("click", function() {
+  all = !all;
+  if (!all) {
+    var top = root.querySelector(".idx").getBoundingClientRect().top;
+    if (top < 0) lenis ? lenis.scrollTo("#index", { immediate: true }) : root.querySelector(".idx").scrollIntoView();
+  }
+  relayout(all);
+});
+root.querySelectorAll(".how").forEach(function(d) {
+  var sm = d.querySelector("summary");
+  sm.addEventListener("click", function(e) {
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    e.preventDefault();
+    if (!d.open) {
+      d.open = true;
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          d.classList.add("op");
+        });
+      });
+    } else {
+      d.classList.remove("op");
+      setTimeout(function() {
+        if (!d.classList.contains("op")) d.open = false;
+        window.ScrollTrigger && window.ScrollTrigger.refresh();
+      }, 460);
+    }
+  });
+  d.addEventListener("toggle", function() {
+    if (d.open) requestAnimationFrame(function() {
+      d.classList.add("op");
+    });
+    else d.classList.remove("op");
+    window.ScrollTrigger && window.ScrollTrigger.refresh();
+  });
+});
+function revealAll() {
+  var h = root.querySelector(".hl");
+  if (h) h.classList.add("up");
+}
+var tries = 0;
+(function wait() {
+  if (window.gsap && window.ScrollTrigger && window.SplitText && window.Lenis && window.Flip) return init();
+  if (++tries > 80) {
+    revealAll();
+    return;
+  }
+  setTimeout(wait, 50);
+})();
+function init() {
+  var gsap = window.gsap, ScrollTrigger = window.ScrollTrigger, SplitText = window.SplitText;
+  gsap.registerPlugin(ScrollTrigger, SplitText, window.Flip);
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) {
+    lenis = new window.Lenis({ lerp: 0.08, smoothWheel: true, syncTouch: false, anchors: true });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(function(t) {
+      lenis.raf(t * 1e3);
+    });
+    gsap.ticker.lagSmoothing(0);
+  }
+  var mm = gsap.matchMedia();
+  mm.add("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)", function() {
+    var off = [];
+    function on(el, ev, fn) {
+      el.addEventListener(ev, fn);
+      off.push(function() {
+        el.removeEventListener(ev, fn);
+      });
+    }
+    html.classList.add("tilt");
+    root.querySelectorAll(".card, .ic>article, .mk:not(.slot)>article").forEach(function(c) {
+      var rx = gsap.quickTo(c, "rotationX", { duration: 0.6, ease: "power3.out" }), ry = gsap.quickTo(c, "rotationY", { duration: 0.6, ease: "power3.out" });
+      gsap.set(c, { transformPerspective: 1400 });
+      on(c, "pointermove", function(e) {
+        var r = c.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width - 0.5, ny = (e.clientY - r.top) / r.height - 0.5;
+        var max = c.classList.contains("card") ? 2 : 3;
+        ry(nx * 2 * max);
+        rx(-ny * 2 * max);
+        c.style.setProperty("--mx", (nx + 0.5) * 100 + "%");
+        c.style.setProperty("--my", (ny + 0.5) * 100 + "%");
+      });
+      on(c, "pointerleave", function() {
+        rx(0);
+        ry(0);
+      });
+    });
+    root.querySelectorAll(".card .bf").forEach(function(f) {
+      gsap.fromTo(f, { yPercent: 3 }, {
+        yPercent: -3,
+        ease: "none",
+        scrollTrigger: { trigger: f, start: "top bottom", end: "bottom top", scrub: true }
+      });
+    });
+    root.querySelectorAll(".pill.red").forEach(function(b) {
+      var qx = gsap.quickTo(b, "x", { duration: 0.4, ease: "power3.out" }), qy = gsap.quickTo(b, "y", { duration: 0.4, ease: "power3.out" });
+      on(b, "pointermove", function(e) {
+        var r = b.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        qx(Math.max(-6, Math.min(6, dx * 0.2)));
+        qy(Math.max(-6, Math.min(6, dy * 0.3)));
+      });
+      on(b, "pointerleave", function() {
+        qx(0);
+        qy(0);
+      });
+    });
+    return function() {
+      off.forEach(function(f) {
+        f();
+      });
+      html.classList.remove("tilt");
+    };
+  });
+  mm.add({ isDesktop: "(min-width: 700px)", isMobile: "(max-width: 699px)", reduceMotion: "(prefers-reduced-motion: reduce)" }, function(ctx) {
+    if (ctx.conditions.reduceMotion) {
+      revealAll();
+      return;
+    }
+    var lines = root.querySelectorAll(".hl .ln>span");
+    gsap.set(lines, { y: 0, yPercent: 100 });
+    root.querySelector(".hl").classList.add("up");
+    gsap.to(lines, { yPercent: 0, duration: 0.9, ease: "expo.out", stagger: 0.08, delay: 0.05 });
+    gsap.to(root.querySelectorAll(".hc, .hud"), {
+      autoAlpha: 0,
+      y: -24,
+      ease: "none",
+      scrollTrigger: { trigger: root.querySelector(".stage"), start: "top top", end: "+=120", scrub: true }
+    });
+    gsap.fromTo(root.querySelector(".hero"), { "--scrim": 1 }, {
+      "--scrim": 0,
+      ease: "none",
+      scrollTrigger: { trigger: root.querySelector(".stage"), start: "top top", end: "+=120", scrub: true }
+    });
+    if (!html.classList.contains("no3d")) {
+      var prog = { p: 0 };
+      gsap.to(prog, {
+        p: 1,
+        ease: "none",
+        scrollTrigger: { trigger: root.querySelector(".stage"), start: "top top", end: "bottom bottom", scrub: 0.6 },
+        onUpdate: function() {
+          setP(prog.p);
+        }
+      });
+    }
+    var below = function() {
+      root.querySelectorAll("[data-split]").forEach(function(h) {
+        SplitText.create(h, {
+          type: "lines",
+          mask: "lines",
+          autoSplit: true,
+          onSplit: function(self) {
+            return gsap.from(self.lines, { yPercent: 100, duration: 0.8, ease: "expo.out", stagger: 0.08, scrollTrigger: { trigger: h, start: "top 88%", once: true } });
+          }
+        });
+      });
+      root.querySelectorAll(".card, .cbox, .mk, .skills").forEach(function(c) {
+        gsap.from(c, { y: 32, autoAlpha: 0, duration: 0.6, ease: "power3.out", scrollTrigger: { trigger: c, start: "top 88%", once: true } });
+      });
+      var first = root.querySelectorAll(".ic:not(.x)");
+      gsap.set(first, { y: 32, autoAlpha: 0 });
+      ScrollTrigger.batch(first, {
+        start: "top 90%",
+        once: true,
+        onEnter: function(b) {
+          gsap.to(b, { y: 0, autoAlpha: 1, duration: 0.6, ease: "power3.out", stagger: 0.08, overwrite: true });
+        }
+      });
+      root.querySelectorAll("[data-count]").forEach(function(b) {
+        var to = +b.getAttribute("data-count"), suf = b.getAttribute("data-suf") || "", o = { v: 0 };
+        b.textContent = "0" + suf;
+        gsap.to(o, {
+          v: to,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: { trigger: b, start: "top 92%", once: true },
+          onUpdate: function() {
+            b.textContent = Math.round(o.v).toLocaleString("en-US") + suf;
+          }
+        });
+      });
+      ScrollTrigger.refresh();
+    };
+    var idle = window.requestIdleCallback ? function(f) {
+      return requestIdleCallback(f, { timeout: 1200 });
+    } : function(f) {
+      return setTimeout(f, 300);
+    };
+    idle(below);
+  });
+  Promise.all([document.fonts ? document.fonts.ready : 0, document.readyState === "complete" ? 0 : new Promise(function(r) {
+    addEventListener("load", r, { once: true });
+  })]).then(function() {
+    ScrollTrigger.refresh();
+  });
+}
+</script><script type="module">const T3 = "https://cdn.jsdelivr.net/npm/three@0.186.1";
+const Q = new URLSearchParams(location.search);
+const POSTER = Q.has("poster") ? Math.min(1, Math.max(0, +Q.get("poster") || 0)) : null;
+const html = document.documentElement;
+const wantScene = POSTER !== null || !(html.classList.contains("rm") || html.classList.contains("no3d") || html.classList.contains("swgl"));
+if (wantScene) {
+  if (POSTER !== null) boot();
+  else {
+    const idle = window.requestIdleCallback || ((f) => setTimeout(f, 300));
+    requestAnimationFrame(() => setTimeout(() => idle(boot, { timeout: 1500 }), 0));
+  }
+}
+async function boot() {
+  const canvas = document.querySelector("#sz8 .cv");
+  if (!canvas) return;
+  const small = matchMedia("(max-width: 699px), (pointer: coarse)").matches || Q.has("small");
+  let bloomOn = !small;
+  const urls = [T3 + "/+esm"];
+  if (bloomOn) for (const f of ["EffectComposer", "RenderPass", "UnrealBloomPass", "OutputPass"])
+    urls.push(`${T3}/examples/jsm/postprocessing/${f}.js/+esm`);
+  let mods;
+  try {
+    mods = await Promise.all(urls.map((u) => import(u)));
+  } catch (err) {
+    html.classList.add("no3d");
+    return;
+  }
+  const THREE = mods[0];
+  console.info("three r" + THREE.REVISION);
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: !small, powerPreference: "high-performance", preserveDrawingBuffer: POSTER !== null });
+  } catch (err) {
+    html.classList.add("no3d");
+    return;
+  }
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 0.9;
+  let dpr = Math.min(devicePixelRatio || 1, small ? 1.25 : 1.5);
+  renderer.setPixelRatio(dpr);
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(657931);
+  const camZ = small ? 14 : 10;
+  const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 80);
+  camera.position.set(0, 0, camZ);
+  const world = new THREE.Group();
+  scene.add(world);
+  const ink = new THREE.Color(15921130), red = new THREE.Color(15020586);
+  let seed = 11;
+  const rnd = () => (seed = seed * 16807 % 2147483647) / 2147483647;
+  const gauss = () => {
+    let u = 0;
+    while (!u) u = rnd();
+    return Math.sqrt(-2 * Math.log(u)) * Math.cos(6.2831853 * rnd());
+  };
+  const N = 140, K = 6, CORE = 0.95;
+  const A = new Float32Array(N * 3), B = new Float32Array(N * 3), C = new Float32Array(N * 3);
+  const P = new Float32Array(N * 3), ph = new Float32Array(N), cl = new Uint8Array(N);
+  const dir = [];
+  for (let k = 0; k < K; k++) {
+    const y = 1 - (k + 0.5) / K * 2, r = Math.sqrt(1 - y * y), th = k * 2.399963;
+    const v = [Math.cos(th) * r, y * 0.8, Math.sin(th) * r], l = Math.hypot(v[0], v[1], v[2]);
+    dir.push([v[0] / l, v[1] / l, v[2] / l]);
+  }
+  const src = small ? [[-1.3, 3.5, -1], [1.5, 2.2, -2], [-1.5, 0.5, -1.5], [1.4, -1, -0.5], [-1.2, -2.6, -2], [1.3, -3.8, -1]] : [[-4.6, 2, -1.5], [-3.2, -0.9, -1], [0.4, 2.6, -3], [2.9, -2.3, -1.5], [4.8, 1.6, -2], [0.6, -3.1, -1.5]];
+  const fa = small && innerWidth < innerHeight ? 0.55 : 1, fb = small && innerWidth < innerHeight ? 0.74 : 1;
+  for (let i = 0; i < N; i++) {
+    const k = i % K, d = dir[k], s = src[k], o = i * 3;
+    cl[i] = k;
+    ph[i] = rnd() * 6.2832;
+    A[o] = (s[0] + gauss() * 0.75) * fa;
+    A[o + 1] = s[1] + gauss() * 0.75;
+    A[o + 2] = s[2] + gauss() * 0.6;
+    B[o] = (d[0] * 2.3 + gauss() * 0.38) * fb;
+    B[o + 1] = d[1] * 2.3 + gauss() * 0.38;
+    B[o + 2] = d[2] * 2.3 + gauss() * 0.38;
+    let x = d[0] + gauss() * 0.42, y = d[1] + gauss() * 0.42, z = d[2] + gauss() * 0.42;
+    const l = Math.hypot(x, y, z), rr = (CORE + 0.18 + rnd() * 0.12) / l;
+    C[o] = x * rr;
+    C[o + 1] = y * rr;
+    C[o + 2] = z * rr;
+  }
+  const ea = [], eb = [], seen = /* @__PURE__ */ new Set();
+  const d2 = (i, j) => {
+    const a = i * 3, b = j * 3;
+    return (B[a] - B[b]) ** 2 + (B[a + 1] - B[b + 1]) ** 2 + (B[a + 2] - B[b + 2]) ** 2;
+  };
+  const r2 = (i) => B[i * 3] ** 2 + B[i * 3 + 1] ** 2 + B[i * 3 + 2] ** 2;
+  for (let i = 0; i < N; i++) {
+    const near = [];
+    for (let j = 0; j < N; j++) if (j !== i && cl[j] === cl[i]) near.push([d2(i, j), j]);
+    near.sort((a, b) => a[0] - b[0]);
+    for (const [, j] of near.slice(0, 2 + i % 2)) {
+      const key = i < j ? i * 1e3 + j : j * 1e3 + i;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      if (r2(i) >= r2(j)) {
+        ea.push(i);
+        eb.push(j);
+      } else {
+        ea.push(j);
+        eb.push(i);
+      }
+    }
+  }
+  for (let k = 0; k < K; k++) {
+    const mine = [];
+    for (let i = 0; i < N; i++) if (cl[i] === k) mine.push([r2(i), i]);
+    mine.sort((a, b) => a[0] - b[0]);
+    for (const [, i] of mine.slice(0, 1)) {
+      ea.push(i);
+      eb.push(-1);
+    }
+  }
+  const E = ea.length;
+  const outStart = new Int16Array(N + 1), outList = new Int16Array(E);
+  for (let e = 0; e < E; e++) outStart[ea[e] + 1]++;
+  for (let i = 0; i < N; i++) outStart[i + 1] += outStart[i];
+  const fill = outStart.slice(0, N);
+  for (let e = 0; e < E; e++) outList[fill[ea[e]]++] = e;
+  const nodeGeo = new THREE.IcosahedronGeometry(0.035, 0);
+  const nodeMat = new THREE.MeshBasicMaterial({ color: ink.clone().multiplyScalar(0.7) });
+  const nodes = new THREE.InstancedMesh(nodeGeo, nodeMat, N);
+  nodes.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+  nodes.frustumCulled = false;
+  const im = nodes.instanceMatrix.array;
+  for (let i = 0; i < N; i++) {
+    const o = i * 16;
+    im[o] = im[o + 5] = im[o + 10] = im[o + 15] = 1;
+  }
+  const nodeCol = new THREE.Color();
+  for (let i = 0; i < N; i++) nodes.setColorAt(i, nodeCol.setRGB(1, 1, 1));
+  nodes.instanceColor.setUsage(THREE.DynamicDrawUsage);
+  const nc = nodes.instanceColor.array;
+  world.add(nodes);
+  const lp = new Float32Array(E * 6);
+  const lineGeo = new THREE.BufferGeometry();
+  lineGeo.setAttribute("position", new THREE.BufferAttribute(lp, 3).setUsage(THREE.DynamicDrawUsage));
+  const lc = new Float32Array(E * 6).fill(1);
+  lineGeo.setAttribute("color", new THREE.BufferAttribute(lc, 3).setUsage(THREE.DynamicDrawUsage));
+  const lineMat = new THREE.LineBasicMaterial({ color: ink, vertexColors: true, transparent: true, opacity: 0.14, depthWrite: false });
+  const lines = new THREE.LineSegments(lineGeo, lineMat);
+  lines.frustumCulled = false;
+  world.add(lines);
+  const M = 60, pe = new Int16Array(M), pt = new Float32Array(M), pv = new Float32Array(M), pp = new Float32Array(M * 3);
+  for (let m = 0; m < M; m++) {
+    pe[m] = Math.floor(rnd() * E);
+    pt[m] = rnd();
+    pv[m] = 0.7 + rnd() * 0.6;
+  }
+  const dot = document.createElement("canvas");
+  dot.width = dot.height = 64;
+  const g = dot.getContext("2d"), gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+  gr.addColorStop(0, "rgba(255,255,255,1)");
+  gr.addColorStop(0.25, "rgba(255,255,255,.55)");
+  gr.addColorStop(1, "rgba(255,255,255,0)");
+  g.fillStyle = gr;
+  g.fillRect(0, 0, 64, 64);
+  const dotTex = new THREE.CanvasTexture(dot);
+  const pulseGeo = new THREE.BufferGeometry();
+  pulseGeo.setAttribute("position", new THREE.BufferAttribute(pp, 3).setUsage(THREE.DynamicDrawUsage));
+  const PS = small ? 0.2 : 0.14;
+  const pulseMat = new THREE.PointsMaterial({ size: PS, map: dotTex, color: red, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending });
+  const pulses = new THREE.Points(pulseGeo, pulseMat);
+  pulses.frustumCulled = false;
+  world.add(pulses);
+  const coreGeo = new THREE.IcosahedronGeometry(CORE, 2);
+  const wireGeo = new THREE.WireframeGeometry(coreGeo);
+  const wireMat = new THREE.LineBasicMaterial({ color: ink, transparent: true, opacity: 0.24, depthWrite: false });
+  const wire = new THREE.LineSegments(wireGeo, wireMat);
+  const solidGeo = new THREE.IcosahedronGeometry(CORE * 0.985, 2);
+  const solidMat = new THREE.MeshStandardMaterial({ color: 1312004, emissive: red, emissiveIntensity: 0, roughness: 0.55, metalness: 0.15, flatShading: true, transparent: true, opacity: 0 });
+  solidMat.onBeforeCompile = (sh) => {
+    sh.fragmentShader = sh.fragmentShader.replace(
+      "#include <emissivemap_fragment>",
+      "#include <emissivemap_fragment>\n  float szF = 1.0 - abs(dot(normal, normalize(vViewPosition)));\n  totalEmissiveRadiance *= mix(0.22, 1.0, pow(szF, 1.4));"
+    );
+  };
+  const solid = new THREE.Mesh(solidGeo, solidMat);
+  const core = new THREE.Group();
+  const rimMat = new THREE.ShaderMaterial({
+    uniforms: { uColor: { value: red.clone() }, uI: { value: 0 } },
+    vertexShader: "varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix * vec4(position, 1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }",
+    fragmentShader: "uniform vec3 uColor; uniform float uI; varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1.0 - abs(dot(normalize(vN), normalize(vV))), 2.5); gl_FragColor = vec4(uColor * f * uI, 1.0);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}",
+    transparent: true,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending
+  });
+  const rimGeo = new THREE.IcosahedronGeometry(CORE * 1.02, 4);
+  const rim = new THREE.Mesh(rimGeo, rimMat);
+  core.add(solid, rim, wire);
+  world.add(core);
+  scene.add(new THREE.HemisphereLight(15921130, 657931, 0.35));
+  const sun = new THREE.DirectionalLight(15921130, 1.1);
+  sun.position.set(3, 4, 6);
+  scene.add(sun);
+  const glowMat = new THREE.SpriteMaterial({ map: dotTex, color: red, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0 });
+  const glow = new THREE.Sprite(glowMat);
+  glow.scale.set(CORE * 3.2, CORE * 3.2, 1);
+  world.add(glow);
+  let composer = null, bloom = null;
+  if (bloomOn) {
+    const [, { EffectComposer }, { RenderPass }, { UnrealBloomPass }, { OutputPass }] = mods;
+    composer = new EffectComposer(renderer);
+    composer.addPass(new RenderPass(scene, camera));
+    bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.5, 0.35, 0.55);
+    const setFull = bloom.setSize.bind(bloom);
+    bloom.setSize = (w, h) => setFull(Math.max(1, Math.round(w / 2)), Math.max(1, Math.round(h / 2)));
+    composer.addPass(bloom);
+    composer.addPass(new OutputPass());
+  }
+  let W = 0, H = 0;
+  function size() {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h || w === W && Math.abs(h - H) < 2) return;
+    W = w;
+    H = h;
+    renderer.setSize(w, h, false);
+    if (composer) {
+      composer.setPixelRatio(dpr);
+      composer.setSize(w, h);
+    }
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  size();
+  addEventListener("resize", size);
+  let tx = 0, ty = 0, px = 0, py = 0;
+  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (fine && POSTER === null) addEventListener("pointermove", (e) => {
+    tx = e.clientX / innerWidth - 0.5;
+    ty = e.clientY / innerHeight - 0.5;
+  }, { passive: true });
+  const TAN = Math.tan(19 * Math.PI / 180);
+  let wide = innerWidth >= 1100;
+  let lift = 0;
+  function measureLift() {
+    lift = 0;
+    if (innerWidth >= 700) return;
+    const eb2 = document.querySelector("#sz8 .eyebrow"), H2 = canvas.clientHeight;
+    if (!eb2 || !H2) return;
+    const top = eb2.getBoundingClientRect().top + scrollY, half = H2 / 2, hh = camZ * TAN;
+    const r = CORE / hh * half;
+    const need = half + r + 32 - top;
+    if (need > 0) lift = need / half * hh;
+  }
+  measureLift();
+  addEventListener("resize", () => {
+    wide = innerWidth >= 1100;
+    measureLift();
+  });
+  if (document.fonts) document.fonts.ready.then(measureLift);
+  const ss = (x, a, b) => {
+    const t = Math.min(1, Math.max(0, (x - a) / (b - a)));
+    return t * t * (3 - 2 * t);
+  };
+  const DEG3 = 3 * Math.PI / 180;
+  let time = 0;
+  const box = { l: 0, t: 0, r: 0, b: 0 };
+  function measureBox() {
+    const hc = document.querySelector("#sz8 .hc");
+    if (!hc) return;
+    const r = hc.getBoundingClientRect(), y = scrollY;
+    box.l = r.left - 32;
+    box.r = r.right + 32;
+    box.t = r.top + y - 32;
+    box.b = r.bottom + y + 32;
+  }
+  measureBox();
+  addEventListener("resize", measureBox);
+  if (document.fonts) document.fonts.ready.then(measureBox);
+  const pv3 = new THREE.Vector3();
+  function inBox(x, y, z) {
+    pv3.set(x, y, z).applyMatrix4(world.matrixWorld).project(camera);
+    const sx = (pv3.x + 1) / 2 * W, sy = (1 - pv3.y) / 2 * H;
+    return sx > box.l && sx < box.r && sy > box.t && sy < box.b;
+  }
+  let dimmed = -1, dimTick = 0;
+  const dep = (z) => Math.min(1, Math.max(0.4, 0.9 + 0.12 * z));
+  function dimText(k) {
+    const kk = Math.round(k * 20) / 20;
+    if (kk === dimmed && ++dimTick % 6) return;
+    dimmed = kk;
+    world.updateMatrixWorld();
+    const lo = 1 - 0.9 * kk;
+    for (let i = 0; i < N; i++) {
+      const o = i * 3, f = (kk > 0 && inBox(P[o], P[o + 1], P[o + 2]) ? lo : 1) * dep(P[o + 2]);
+      nc[o] = nc[o + 1] = nc[o + 2] = f;
+    }
+    nodes.instanceColor.needsUpdate = true;
+    for (let v = 0; v < E * 2; v++) {
+      const o = v * 3, f = (kk > 0 && inBox(lp[o], lp[o + 1], lp[o + 2]) ? lo : 1) * dep(lp[o + 2]);
+      lc[o] = lc[o + 1] = lc[o + 2] = f;
+    }
+    lineGeo.attributes.color.needsUpdate = true;
+  }
+  const lbls = document.querySelectorAll("#sz8 .lbls span"), cx = new Float32Array(K * 3), cn = new Float32Array(K);
+  const lblX = new Float32Array(K), lblY = new Float32Array(K), lblW = new Float32Array(K);
+  let lblOp = -1;
+  const coreS = { x: 0, y: 0, r: 0 };
+  function placeLabels(p) {
+    const op = ss(p, 0.1, 0.15) * (1 - ss(p, 0.3, 0.37));
+    if (Math.abs(op - lblOp) > 0.01) {
+      for (let k = 0; k < lbls.length; k++) lbls[k].style.opacity = op.toFixed(3);
+      lblOp = op;
+    }
+    if (op <= 0 || !lbls.length) return;
+    cx.fill(0);
+    cn.fill(0);
+    world.updateMatrixWorld();
+    pv3.set(0, 0, 0).applyMatrix4(world.matrixWorld).project(camera);
+    coreS.x = (pv3.x + 1) / 2 * W;
+    coreS.y = (1 - pv3.y) / 2 * H;
+    pv3.set(0, CORE * core.scale.x, 0).applyMatrix4(world.matrixWorld).project(camera);
+    coreS.r = Math.abs((1 - pv3.y) / 2 * H - coreS.y);
+    for (let i = 0; i < N; i++) {
+      const c = cl[i], o = i * 3;
+      cx[c * 3] += P[o];
+      cx[c * 3 + 1] += P[o + 1];
+      cx[c * 3 + 2] += P[o + 2];
+      cn[c]++;
+    }
+    for (let k = 0; k < K && k < lbls.length; k++) {
+      pv3.set(cx[k * 3] / cn[k], cx[k * 3 + 1] / cn[k], cx[k * 3 + 2] / cn[k]).applyMatrix4(world.matrixWorld).project(camera);
+      if (!lblW[k]) lblW[k] = lbls[k].offsetWidth;
+      const px2 = (pv3.x + 1) / 2 * W, py2 = (1 - pv3.y) / 2 * H;
+      const x = Math.round(Math.min(W - 24 - lblW[k] / 2, Math.max(24 + lblW[k] / 2, px2))), y = Math.round(Math.min(H - 24, Math.max(100, py2)));
+      const onCore = Math.hypot(px2 - coreS.x, py2 - coreS.y) < coreS.r + 28;
+      lbls[k].style.visibility = onCore ? "hidden" : "";
+      if (x !== lblX[k] || y !== lblY[k]) {
+        lbls[k].style.transform = "translate(" + x + "px," + y + "px)";
+        lblX[k] = x;
+        lblY[k] = y;
+      }
+    }
+  }
+  const vig = document.querySelector("#sz8 .vig"), layerEl = document.querySelector("#sz8 .layer");
+  let live = false, lastOp = 1, lastVig = -1;
+  function update(dt) {
+    const p = POSTER !== null ? POSTER : window.__szP || 0;
+    const s1 = ss(p, 0.37, 0.62), s2 = ss(p, 0.64, 0.8), spoke = ss(p, 0.1, 0.4);
+    time += dt;
+    const amp = 0.075 * (1 - 0.75 * s2);
+    for (let i = 0; i < N; i++) {
+      const o = i * 3, q = ph[i];
+      const ax = A[o] + (B[o] - A[o]) * s1, ay = A[o + 1] + (B[o + 1] - A[o + 1]) * s1, az = A[o + 2] + (B[o + 2] - A[o + 2]) * s1;
+      const x = ax + (C[o] - ax) * s2 + Math.sin(time * 0.15 + q) * amp;
+      const y = ay + (C[o + 1] - ay) * s2 + Math.cos(time * 0.13 + q * 1.3) * amp;
+      const z = az + (C[o + 2] - az) * s2 + Math.sin(time * 0.11 + q * 0.7) * amp;
+      P[o] = x;
+      P[o + 1] = y;
+      P[o + 2] = z;
+      const m = i * 16;
+      im[m + 12] = x;
+      im[m + 13] = y;
+      im[m + 14] = z;
+      im[m] = im[m + 5] = im[m + 10] = Math.min(1.25, Math.max(0.55, 1 + 0.11 * z));
+    }
+    nodes.instanceMatrix.needsUpdate = true;
+    for (let e = 0; e < E; e++) {
+      const a = ea[e] * 3, o = e * 6;
+      lp[o] = P[a];
+      lp[o + 1] = P[a + 1];
+      lp[o + 2] = P[a + 2];
+      if (eb[e] < 0) {
+        const l = CORE / (Math.hypot(P[a], P[a + 1], P[a + 2]) || 1), g2 = spoke;
+        lp[o + 3] = P[a] + (P[a] * l - P[a]) * g2;
+        lp[o + 4] = P[a + 1] + (P[a + 1] * l - P[a + 1]) * g2;
+        lp[o + 5] = P[a + 2] + (P[a + 2] * l - P[a + 2]) * g2;
+      } else {
+        const b = eb[e] * 3;
+        lp[o + 3] = P[b];
+        lp[o + 4] = P[b + 1];
+        lp[o + 5] = P[b + 2];
+      }
+    }
+    lineGeo.attributes.position.needsUpdate = true;
+    lineMat.opacity = 0.14 + 0.16 * s1 - 0.06 * s2;
+    const active = Math.round(18 + 42 * s1), speed = 0.35 + 0.65 * s1 + 0.35 * s2;
+    for (let m = 0; m < active; m++) {
+      if (POSTER === null) {
+        pt[m] += pv[m] * speed * dt;
+        if (pt[m] >= 1) {
+          pt[m] = 0;
+          const to = eb[pe[m]];
+          const n = to < 0 ? 0 : outStart[to + 1] - outStart[to];
+          pe[m] = n ? outList[outStart[to] + Math.floor(Math.random() * n)] : Math.floor(Math.random() * E);
+        }
+      }
+      const o = pe[m] * 6, t = pt[m], w = m * 3;
+      pp[w] = lp[o] + (lp[o + 3] - lp[o]) * t;
+      pp[w + 1] = lp[o + 1] + (lp[o + 4] - lp[o + 1]) * t;
+      pp[w + 2] = lp[o + 2] + (lp[o + 5] - lp[o + 2]) * t;
+    }
+    pulseGeo.setDrawRange(0, active);
+    pulseMat.size = PS * (2.4 - 1.2 * s1);
+    pulseMat.color.copy(red).multiplyScalar(1.8 - 0.6 * s1);
+    pulseGeo.attributes.position.needsUpdate = true;
+    wireMat.opacity = 0.24 * (1 - s2) + 0.05;
+    solidMat.opacity = s2;
+    solidMat.emissiveIntensity = 1.4 * s2;
+    rimMat.uniforms.uI.value = 1.6 * s2;
+    rim.visible = s2 > 1e-3;
+    solid.visible = s2 > 1e-3;
+    glowMat.opacity = 0.15 * (1 - s2);
+    core.rotation.y += dt * 0.02;
+    core.rotation.x = 0.35;
+    px += (tx - px) * 0.05;
+    py += (ty - py) * 0.05;
+    world.rotation.y = px * 2 * DEG3;
+    world.rotation.x = py * 2 * DEG3;
+    camera.position.z = camZ - 1.6 * p;
+    const k = 1 - ss(p, 0.05, 0.33), off = wide ? k : 0;
+    const hh = camera.position.z * TAN;
+    world.position.x = off * 0.45 * hh * camera.aspect;
+    world.position.y = off * 0.16 * hh + k * lift;
+    const out = ss(p, 0.92, 1);
+    core.scale.setScalar(1 - 0.3 * out);
+    if (live) {
+      const o = 1 - out;
+      if (Math.abs(o - lastOp) > 0.01 || o === 1 !== (lastOp === 1)) {
+        canvas.style.opacity = o.toFixed(3);
+        lastOp = o;
+      }
+    }
+    if (vig) {
+      const v = ss(p, 0.5, 0.9);
+      if (Math.abs(v - lastVig) > 0.01) {
+        vig.style.opacity = v.toFixed(3);
+        lastVig = v;
+      }
+    }
+    dimText(k);
+    placeLabels(p);
+  }
+  function draw() {
+    if (bloomOn) composer.render();
+    else renderer.render(scene, camera);
+  }
+  if (POSTER !== null) {
+    html.classList.add("poster");
+    size();
+    if (document.fonts) await document.fonts.ready;
+    measureLift();
+    await renderer.compileAsync(scene, camera);
+    update(0);
+    draw();
+    update(0);
+    draw();
+    canvas.classList.add("on");
+    window.__posterReady = true;
+    return;
+  }
+  let onScreen = true, running = false, last = 0, frames = 0, secStart = 0, secFrames = 0;
+  let phase = 0, mFrom = 6, mT = 0;
+  const _v = new THREE.Vector3();
+  const api = window.SZ3D = {
+    frames: 0,
+    fps: 0,
+    measured: [],
+    state: "starting",
+    setProgress(p) {
+      window.__szP = p;
+    },
+    coreBottom() {
+      world.updateMatrixWorld();
+      _v.set(0, -CORE, 0).applyMatrix4(world.matrixWorld).project(camera);
+      return (1 - _v.y) / 2 * canvas.clientHeight;
+    },
+    coreCircle() {
+      world.updateMatrixWorld();
+      _v.set(0, 0, 0).applyMatrix4(world.matrixWorld).project(camera);
+      const x = (_v.x + 1) / 2 * W, y = (1 - _v.y) / 2 * H;
+      _v.set(0, -CORE * core.scale.x, 0).applyMatrix4(world.matrixWorld).project(camera);
+      return { x, y, r: Math.abs((1 - _v.y) / 2 * H - y) };
+    },
+    longEdges(f) {
+      world.updateMatrixWorld();
+      let n = 0, m = 0;
+      const q = new THREE.Vector3();
+      for (let e = 0; e < E; e++) {
+        const o = e * 6;
+        _v.set(lp[o], lp[o + 1], lp[o + 2]).applyMatrix4(world.matrixWorld).project(camera);
+        q.set(lp[o + 3], lp[o + 4], lp[o + 5]).applyMatrix4(world.matrixWorld).project(camera);
+        const L = Math.hypot((_v.x - q.x) / 2 * W, (_v.y - q.y) / 2 * H);
+        if (L > m) m = L;
+        if (L > f * Math.max(W, H)) n++;
+      }
+      return { n, longest: Math.round(m), edges: E };
+    }
+  };
+  function frame(now) {
+    const dt = last ? Math.min(0.05, (now - last) / 1e3) : 0;
+    last = now;
+    update(dt);
+    draw();
+    frames++;
+    api.frames = frames;
+    if (frames === 1) {
+      canvas.classList.add("on");
+      api.state = "running";
+      setTimeout(() => {
+        if (api.state === "poster") return;
+        canvas.style.transition = "none";
+        live = true;
+        lastOp = -1;
+        layerEl.classList.add("live");
+      }, 1300);
+    }
+    if (!secStart) secStart = now;
+    secFrames++;
+    if (now - secStart >= 1e3) {
+      api.fps = Math.round(secFrames * 1e3 / (now - secStart));
+      canvas.dataset.fps = api.fps;
+      secStart = now;
+      secFrames = 0;
+    }
+    if (phase < 2) {
+      if (frames === mFrom) mT = now;
+      else if (frames > mFrom && (frames === mFrom + 90 || now - mT > 3e3)) {
+        const fps = (frames - mFrom) * 1e3 / (now - mT);
+        api.measured.push(Math.round(fps));
+        if (phase === 0 && fps < 45) {
+          bloomOn = false;
+          dpr = 1;
+          renderer.setPixelRatio(1);
+          W = 0;
+          size();
+          api.state = "stepped-down";
+          phase = 1;
+          mFrom = frames + 5;
+        } else if (fps < 30) {
+          slow();
+          return;
+        } else phase = 2;
+      }
+    }
+  }
+  let ready = false;
+  function play() {
+    if (!ready || running || !onScreen || document.hidden) return;
+    running = true;
+    last = 0;
+    secStart = 0;
+    secFrames = 0;
+    if (phase < 2) mFrom = frames + 5;
+    renderer.setAnimationLoop(frame);
+  }
+  function pause() {
+    if (!running) return;
+    running = false;
+    renderer.setAnimationLoop(null);
+  }
+  function slow() {
+    pause();
+    api.state = "poster";
+    live = false;
+    canvas.style.transition = "";
+    canvas.style.opacity = "";
+    layerEl.classList.remove("live");
+    canvas.classList.remove("on");
+    setTimeout(teardown, 1300);
+  }
+  function teardown() {
+    pause();
+    scene.traverse((o) => {
+      if (o.geometry) o.geometry.dispose();
+      if (o.material) o.material.dispose();
+    });
+    dotTex.dispose();
+    wireGeo.dispose();
+    if (composer) composer.dispose();
+    renderer.dispose();
+  }
+  const stage = document.querySelector("#sz8 .stage");
+  new IntersectionObserver((es) => {
+    onScreen = es[0].isIntersecting;
+    onScreen ? play() : pause();
+  }).observe(stage);
+  document.addEventListener("visibilitychange", () => document.hidden ? pause() : play());
+  addEventListener("pagehide", () => {
+    if (api.state !== "poster") {
+      api.state = "poster";
+      teardown();
+    }
+  });
+  addEventListener("pageshow", (ev) => {
+    if (ev.persisted) {
+      canvas.classList.remove("on");
+      canvas.style.opacity = "";
+      layerEl.classList.remove("live");
+    }
+  });
+  await renderer.compileAsync(scene, camera);
+  ready = true;
+  play();
+}
+</script></body></html>
