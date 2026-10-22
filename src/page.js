@@ -72,7 +72,7 @@ root.querySelectorAll("a.em").forEach(function(a) {
       c.textContent = t;
     });
     fc.forEach(function(c) {
-      c.textContent = "Dhaka " + n + " · GMT+6";
+      c.textContent = "Chattogram " + n + " · GMT+6";
     });
   }
   tick();
